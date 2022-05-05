@@ -2,18 +2,26 @@
 /*                                   Blue theme 4                                   */
 /*                      by https://github.com/SiriusXT                       */ 
 /*A Theme For Trilium Notes (https://https://github.com/SiriusXT/trilium-blue-theme)*/
-
-
-div.tree ul#ft-id-1.ui-fancytree.fancytree-container.fancytree-plain.fancytree-ext-clones.fancytree-ext-dnd5.fancytree-treefocus li.fancytree-lastsib ul li:hover {
- 
+li.fancytree-lastsib ul li:hover {
 }
+li.fancytree-lastsib ul li[aria-expanded="true"]{
+    background: rgba(240,240,240,0.5) !important;
+}
+
 li.fancytree-lastsib ul li[role='treeitem']:hover {
-  background: rgba(220,220,220,0.5) !important;
+ background: rgba(70,130,180,0.3) !important;
 }
-
+li.fancytree-lastsib ul li[role='treeitem'] {
+   border-left: thin solid rgba(70,130,180,1) !important;
+   border-radius: 10px !important;
+}
+span.button-widget.icon-action.bx.component.bx-history{
+    padding-top:5px !important;
+}
 .title-bar-buttons div button.icon-action {
   font-size: 80% !important;
 }
+
 p{
    margin-bottom:0.5rem;
 }
@@ -119,7 +127,7 @@ h4 {
  font-family: 'Fira Mono';
  font-style: normal;
  font-weight: 400;
- src: url('/custom/fonts/FiraMono-Regular.woff') format('woff');
+ src: url('/custom/fonts/syhtn.woff2') format('woff2');
 }
 
 /* Fira Sans */
@@ -127,7 +135,7 @@ h4 {
  font-family: 'Fira Sans';
  font-style: light;
  font-weight: 300;
- src: url('/custom/fonts/FiraSans-Light.woff') format('woff');
+ src: url('/custom/fonts/syhtl.woff2') format('woff2');
 }
 @font-face {
  font-family: 'Fira Sans';
@@ -141,13 +149,13 @@ h4 {
  font-family: 'Fira Code';
  font-style: normal;
  font-weight: 300;
- src: url('/custom/fonts/FiraCode-Regular.woff') format('woff');
+ src: url('/custom/fonts/syhtn.woff2') format('woff2');
 }
 @font-face {
  font-family: 'Fira Code';
  font-style: normal;
  font-weight: 600;
- src: url('/custom/fonts/FiraCode-Bold.woff') format('woff');
+ src: url('/custom/fonts/syhtb.woff2') format('woff2');
 }
 
 /* Roboto-slab */
@@ -155,25 +163,25 @@ h4 {
  font-family: 'Roboto Slab';
  font-style: normal;
  font-weight: 200;
- src: url('/custom/fonts/roboto-slab-v11-latin-200.woff') format('woff'); 
+ src: url('/custom/fonts/syhtr.woff2') format('woff2'); 
 }
 @font-face {
  font-family: 'Roboto Slab';
  font-style: normal;
  font-weight: 300;
- src: url('/custom/fonts/roboto-slab-v11-latin-300.woff') format('woff'); 
+ src: url('/custom/fonts/syhtn.woff2') format('woff2'); 
 }
 @font-face {
  font-family: 'Roboto Slab';
  font-style: normal;
  font-weight: 400;
- src: url('/custom/fonts/roboto-slab-v11-latin-regular.woff') format('woff'); 
+ src: url('/custom/fonts/syhtm.woff2') format('woff2'); 
 }
 @font-face {
  font-family: 'Roboto Slab';
  font-style: normal;
  font-weight: 600;
- src: url('/custom/fonts/roboto-slab-v11-latin-600.woff') format('woff'); 
+ src: url('/custom/fonts/syhth.woff2') format('woff2'); 
 }
 
 
@@ -606,7 +614,7 @@ height: 36px; padding: 2px 4px 5px;
 }
 
 div#root-widget div#left-pane span.fancytree-node.fancytree-active {
- background-color: rgba(220,220,220,0.7) !important;
+ /*background-color: rgba(220,220,220,0.7) !important;自己注释了*/
  border: none !important;
  /*! font-family: var(--main-font-family-serif); */
 }
