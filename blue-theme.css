@@ -2,20 +2,23 @@
 /*                                   Blue theme 4                                   */
 /*                      by https://github.com/SiriusXT                       */ 
 /*A Theme For Trilium Notes (https://https://github.com/SiriusXT/trilium-blue-theme)*/
+/*treecolor*/
+
 li.fancytree-lastsib ul li:hover {
 }
-li.fancytree-lastsib ul li[aria-expanded="true"]{
-    background: rgba(240,240,240,0.5) !important;
-}
+/*ul#ft-id-1>li.fancytree-lastsib>ul>li[aria-expanded="true"]{
+    background: rgba(240,240,240,0.6) ;
+}*/
 
 li.fancytree-lastsib ul li[role='treeitem']:hover {
- background: rgba(70,130,180,0.3) !important;
+ background: rgba(70,130,180,0.1) !important;
 }
+
 li.fancytree-lastsib ul li[role='treeitem'] {
-   border-left: thin solid rgba(70,130,180,1) !important;
+   border-left: 1.5px solid rgba(70,130,180,1) !important;
    border-radius: 10px !important;
 }
-span.button-widget.icon-action.bx.component.bx-history{
+span.button-widget.icon-action.bx.component.bx-history,.ribbon-button-container .icon-action{
     padding-top:5px !important;
 }
 .title-bar-buttons div button.icon-action {
@@ -24,7 +27,13 @@ span.button-widget.icon-action.bx.component.bx-history{
 
 p{
    margin-bottom:0.5rem;
+   text-indent:2em;
 }
+blockquote>p{
+    text-indent:0em;
+}
+
+
 .note-detail{
    line-height:1.2;
 }
@@ -80,47 +89,50 @@ h1{
    border-bottom: 1px solid rgba(0,0,0, 1);
 }
 h2 {
-   background: rgba(43,102,149, 1);
-   border-radius: 6px 6px 6px 6px;
-   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-   color: #FFFFFF;
-   /*font-family:"微软雅黑", "宋体", "黑体", Arial;
+  background: rgba(43,102,149, 0.8);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+  color: #FFFFFF;
    font-size: 18px;
-   height: 25px;
-   line-height: 25px; */  
-   font-weight: bold;
-   margin: 18px 0 !important;
-   padding: 8px 0 5px 5px;
-   text-shadow: 2px 2px 3px #222222;
+  /*font-family:"微软雅黑", "宋体", "黑体", Arial;
+  
+  height: 25px;
+  line-height: 25px; */  
+  font-weight: bold;
+  margin: 18px 0 !important;
+  padding: 8px 0 5px 5px;
+  text-shadow: 2px 2px 3px #222222;
 }
 h3 {
-   background: rgba(43,102,0, 1);
-   border-radius: 6px 6px 6px 6px;
-   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-   color: #FFFFFF;
-   /*font-family:"微软雅黑", "宋体", "黑体", Arial;
-   font-size: 15px;
-   height: 24px;
-   line-height: 23px;
-   font-weight: bold;*/
-   margin: 12px 0 !important;
-   padding: 5px 0 5px 10px;
-   text-shadow: 2px 2px 3px #222222;
+  background: rgba(43,102,0,0.6);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+  color: #FFFFFF;
+  /*font-family:"微软雅黑", "宋体", "黑体", Arial;
+  font-size: 15px;
+  height: 24px;
+  line-height: 23px;
+  font-weight: bold;*/
+  margin: 12px 0 !important;
+  padding: 5px 0 5px 10px;
+  text-shadow: 2px 2px 3px #222222;
 }
 h4 {
-   background: #5B9600;
-   border-radius: 6px 6px 6px 6px;
-   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-   color: #FFFFFF;
-   /*font-family:"微软雅黑", "宋体", "黑体", Arial;
-   font-size: 13px;
-   height: 24px;
-   line-height: 20px;
-   font-weight: bold;*/
-   margin: 12px 0 !important;
-   padding: 5px 0 5px 10px;
-   text-shadow: 2px 2px 3px #222222;
+  background: rgba(91,150,0,0.8);
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+  color: #FFFFFF;
+  /*font-family:"微软雅黑", "宋体", "黑体", Arial;
+  font-size: 13px;
+  height: 24px;
+  line-height: 20px;
+  font-weight: bold;*/
+  margin: 12px 0 !important;
+  padding: 5px 0 5px 10px;
+  text-shadow: 2px 2px 3px #222222;
 }
+ 
+ 
 
 /* Fira Mono */
 @font-face {
@@ -623,8 +635,8 @@ div#root-widget div#left-pane span.fancytree-node.fancytree-node span {
  font-family: var(--main-font-family-serif);
 }
 
-div#root-widget div#left-pane span.fancytree-node.fancytree-active span {
- color: var(--color-blue-dark);
+div#root-widget div#left-pane span.fancytree-node.fancytree-active:not(span.fancytree-node.imp) span {
+     color: var(--color-blue-dark);/*自定义*/
 }
 
 div#root-widget div#left-pane span.fancytree-node.protected > span.fancytree-custom-icon {
