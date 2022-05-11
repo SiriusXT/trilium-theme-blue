@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-由[melon-theme](https://github.com/zadam/trilium)改进而来,blue-theme.zip为导出的zip笔记。
-=======
 由[melon-theme](https://github.com/zadam/trilium)改进而来,blue-theme.zip为导出的笔记,包含思源黑体。
-
-> > > > > > > 
 
 ## 特点
 
