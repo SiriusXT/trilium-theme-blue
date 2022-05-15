@@ -1,4 +1,6 @@
-/*通知居右下角*/
+/*
+https://github.com/SiriusXT/trilium-theme-blue
+*/
 div#toast-container{
    right:0px !important;
    bottom:0px !important;
@@ -6,52 +8,12 @@ div#toast-container{
    width:auto !important;
 }
 
-/*思源黑体*/
-@font-face {
-   font-family: 'syht';
-   font-style: light;
-   font-weight: 200;
-   src: url('/custom/fonts/syhtl.woff2') format('woff2');
-}
-@font-face {
-   font-family: 'syht';
-   font-style: normal;
-   font-weight: 300;
-   src: url('/custom/fonts/syhtn.woff2') format('woff2');
-}
-@font-face {
-   font-family: 'syht';
-   font-style: regular ;
-   font-weight: 400;
-   src: url('/custom/fonts/syhtr.woff2') format('woff2');
-}
-@font-face {
-   font-family: 'syht';
-   font-style: medium ;
-   font-weight: 500;
-   src: url('/custom/fonts/syhtm.woff2') format('woff2');
-}
-@font-face {
-   font-family: 'syht';
-   font-style: bold ;
-   font-weight: 700;
-   src: url('/custom/fonts/syhtb.woff2') format('woff2');
-}
-@font-face {
-   font-family: 'syht';
-   font-style: heavy ;
-   font-weight: 900;
-   src: url('/custom/fonts/syhth.woff2') format('woff2');
-}
-/*左侧标题字体*/
-body,span.fancytree-title{
-   font-family:var(--detail-font-family) !important;
-}
+
 span:not(.fancytree-active) span.fancytree-title{
    font-weight: 500 !important;
 }
 
-/*左侧栏*/
+
 div#launcher-pane {
   background-color: var(--color-blue-light);
 }
@@ -62,11 +24,11 @@ div#launcher-pane .component,
 div#launcher-pane .icon-action {
   color: #f0f4f4;
 }
-/*左侧多选时选中文字下划线*/
+
 span.fancytree-selected span.fancytree-title{
    text-decoration:underline;
 }
-/*左侧导航栏*/
+
 div#launcher-pane .global-menu-button {
   filter: invert(1);
 }
@@ -79,20 +41,20 @@ div#launcher-pane .icon-action:hover {
   background-color: rgba(220,220,220,0.5);
 }
 
-/*搜索栏*/
+
 #left-pane input.search-string {
    background: rgba(255, 255, 255, 0.3) !important;
 }
 div.quick-search.input-group.input-group-sm.component{
    align-content: center;
 }
-/*左侧折叠箭头*/
+
 span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before{
    content: "\ec21" !important;
    visibility: visible !important;
    color: rgba(51,51,51,0.15) !important;
 } 
-/*左右空隙*/
+
 div#root-widget div.gutter-horizontal {
  background: var(--color-gray-light);
  width: 5px !important;
@@ -102,14 +64,11 @@ div#root-widget div.gutter-horizontal {
  border-right: var(--border-standard);
 }
 
-/*标题字体
-.note-icon-widget.dropdown.component{
-   padding-top:3px !important;
-}*/
+
 #center-pane .title-row .note-icon-widget button {
    display: flex;
    color: var(--color-blue-light);
-   /*padding: 5px;*/
+   
    margin:0;
 }
 #center-pane .title-row .note-title-widget input.note-title {
@@ -123,18 +82,11 @@ input.note-title{
    vertical-align: middle;
 }
 
-/*标题栏上划线
-div.ribbon-tab-container{
-   border-top: 1px solid var(--main-border-color);
-}
-*/
-/*笔记字体
-#root-widget *, .modal-content, :not(.ribbon-body *), form input{
-   font-family: var(--main-font-family-sans);
-}*/
 
-/*标签栏样式*/
-/* ----------- TABS ----------- */
+
+
+
+
 html{
    --color-blue-light: #4682B4;
    --color-blue-light-alpha: #4682B470;
@@ -145,7 +97,6 @@ html{
    --border-standard: 1px solid var(--color-gray);
    --color-blue-dark: #2e4b76;
    --link-color: #4682B4 !important;
-   --detail-font-family:'syht' !important;
 }
 .tab-row-widget .note-tab .note-tab-title{
    height: 30px;
@@ -182,16 +133,16 @@ div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab[activ
    content: "\203B ";
    margin-right: 5px;
 }
-/*左侧悬停背景色*/
+
 li.fancytree-lastsib ul li[role='treeitem']:hover {
     background: rgba(70, 130, 180, 0.2) !important;
-   /*background: rgba(70, 130, 180, 0.2) !important;*/
+   
 }
 span.fancytree-node.fancytree-expanded.fancytree-folder:hover{
    background: rgba(70, 130, 180, 0.2) !important;
 }
 
-/*左侧面板墙纸*/
+
 #left-pane.component {
    background-image: url("/custom/background.png");
 }
@@ -226,7 +177,7 @@ li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
    border-radius: 10px !important;
 }
 
-/*左侧面板选中背景色*/
+
 div#root-widget div#left-pane span.fancytree-node.fancytree-active {
    background-color: rgba(70, 130, 180, 0.3) !important;
    border-radius: 10px !important;
@@ -248,9 +199,9 @@ span.fancytree-node:hover{
 p {
    margin-top: 0.1rem !important;
    margin-bottom: 0.1rem !important;
-   /*首行缩进*/
+   
    text-indent: 2em;
-   /*两端对齐*/
+   
      text-align: justify;
       word-break: break-all;
       text-justify: distribute;
@@ -261,19 +212,19 @@ blockquote>p {
 }
 
 p>span.ck-math-tex {
-   text-indent: 0em;/*公式不缩进*/
+   text-indent: 0em;
 }
 
-/*行间距*/
+
 .note-detail {
    line-height: 1.25;
 }
 
-/*图片居中*/
+
 .image-inline {
    vertical-align: middle;
 }
-/*图片*/
+
 .ck-content .image{
    margin: 0.1rem auto !important;
 }
@@ -287,9 +238,7 @@ p>span.ck-math-tex {
    padding: 0px !important;
 }
 
-/*.basic-properties-widget>* {
-   margin-top: 0px !important;
-}*/
+
 
 .basic-properties-widget {
    padding: 0px 12px 0px 12px !important;
@@ -312,7 +261,7 @@ div#launcher-pane .icon-action:hover {
    background-color: rgba(128, 128, 128, 0.5) !important;
 }
 
-/* 滚动条滑块 */
+
 ::-webkit-scrollbar-thumb {
    border-radius: 5px !important;
    background: rgba(0, 0, 0, 0.2) !important;
@@ -326,31 +275,28 @@ div#center-pane .note-book-card {
    border: 1px solid rgba(128, 128, 128, 0.5) !important;
 }
 
-/* 笔记卡片
-div#center-pane .note-book-card:hover {
-   background-color: rgba(220, 220, 220, 0.7);
-}*/
 
-/*代码块*/
+
+
 #center-pane div.note-detail-editable-text div.note-detail-editable-text-editor.ck.ck-content pre,
 #center-pane .CodeMirror pre code {
    color: var(--color-blue-dark) !important;
    padding: 0.5em;
-   /*原来1.5em*/
+   
    margin: 1.0rem auto 0.5rem;
-   /*原来margin: 1.0rem auto 2.5rem;*/
+   
    background-color: var(--color-gray-light);
    border: 1px dotted var(--color-gray);
 }
 
 
-/*公式字体*/
+
 span.katex * {
    font-family: KaTeX_Main !important;
    font: KaTeX_Main, Times New Roman, serif !important;
 }
 
-/*heading样式*/
+
 h1 {
    padding-left: 0.4em;
    border-left: 9px solid rgba(0, 0, 0, 1);

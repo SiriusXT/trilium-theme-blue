@@ -1,23 +1,35 @@
-由[melon-theme](https://github.com/zadam/trilium)改进而来,blue-theme.zip为导出的笔记,包含思源黑体。
+## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
-## 特点
+## Features
 
-1. 蓝色主题
+1. Blue Theme 
 
-2. 更加紧凑，行距，段落间距等
+2. More compact, line spacing, paragraph spacing, etc. 
 
-3. **首行缩进,两端对齐**。
+3. Indent the first line and align both ends. 
 
-4. 目录树鼠标**悬停时显示背景色**，以突出显示选中的文件夹。
+4. The directory tree mouse displays the background color when hovering to highlight the selected folder.
 
-5. **h1,h2,h3,h4的标题样式**。
+5. Tree style.
 
-6. 更加明显的滚动条。
+6. Title style of H1, H2, H3 and H4 . 
 
-7. 树展开背景色。
+7. More obvious scroll bar.
 
-8. 思源黑体。
+8. Expand the background image of the tree. 
 
-9. 其他改变。
+9. Other changes.
+
+## Usage
+
+The theme should work with Trilium version 0.49.5+
+
+1. Create a CSS code note in Trilium and name it `Blue-theme`
+2. Paste the content from `Blue-theme.css` in it
+3. Add the `#appTheme=Blue-theme` attribute to it
+4. Download the `background.png` , then right-click on the note and select Import to note
+5. Add the attribute `#originalFileName=background.png #customResourceProvider=background.png` to `background.png`
+6. Go to Menu > Options, and select Blue-theme as your new theme
+7. Ctrl + R to reload
 
 ![](./screenshot.png)
