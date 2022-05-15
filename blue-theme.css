@@ -1,1083 +1,390 @@
-
-
-/* ============================================================================= */
-/*                                   Blue theme 4                                   */
-/*                      by https://github.com/SiriusXT                       */
-/*A Theme For Trilium Notes (https://https://github.com/SiriusXT/trilium-blue-theme)*/
-/*treecolor*/
-
-li.fancytree-lastsib ul li:hover {
-}
-/*ul#ft-id-1>li.fancytree-lastsib>ul>li[aria-expanded="true"]{
-    background: rgba(240,240,240,0.6) ;
-}*/
-
-li.fancytree-lastsib ul li[role='treeitem']:hover {
- background: rgba(70,130,180,0.1) !important;
+/*通知居右下角*/
+div#toast-container{
+   right:0px !important;
+   bottom:0px !important;
+   top:auto !important;
+   width:auto !important;
 }
 
-li.fancytree-lastsib ul li[role='treeitem'] {
-   border-left: 1.5px solid rgba(70,130,180,1) !important;
-   border-radius: 10px !important;
+/*思源黑体*/
+@font-face {
+   font-family: 'syht';
+   font-style: light;
+   font-weight: 200;
+   src: url('/custom/fonts/syhtl.woff2') format('woff2');
 }
-span.button-widget.icon-action.bx.component.bx-history,.ribbon-button-container .icon-action{
-    padding-top:5px !important;
+@font-face {
+   font-family: 'syht';
+   font-style: normal;
+   font-weight: 300;
+   src: url('/custom/fonts/syhtn.woff2') format('woff2');
 }
-.title-bar-buttons div button.icon-action {
-  font-size: 80% !important;
+@font-face {
+   font-family: 'syht';
+   font-style: regular ;
+   font-weight: 400;
+   src: url('/custom/fonts/syhtr.woff2') format('woff2');
+}
+@font-face {
+   font-family: 'syht';
+   font-style: medium ;
+   font-weight: 500;
+   src: url('/custom/fonts/syhtm.woff2') format('woff2');
+}
+@font-face {
+   font-family: 'syht';
+   font-style: bold ;
+   font-weight: 700;
+   src: url('/custom/fonts/syhtb.woff2') format('woff2');
+}
+@font-face {
+   font-family: 'syht';
+   font-style: heavy ;
+   font-weight: 900;
+   src: url('/custom/fonts/syhth.woff2') format('woff2');
+}
+/*左侧标题字体*/
+body,span.fancytree-title{
+   font-family:var(--detail-font-family) !important;
+}
+span:not(.fancytree-active) span.fancytree-title{
+   font-weight: 500 !important;
 }
 
-p{
-   margin-bottom:0.5rem;
-   text-indent:2em;/*首行缩进*/
-   text-align: justify;/*两端对齐*/
+/*左侧栏*/
+div#launcher-pane {
+  background-color: var(--color-blue-light);
 }
-blockquote>p{
-    text-indent:0em;
+.fancytree-title{
+  top:0 !important;
 }
-p>span.ck-math-tex{
-    text-indent:0em;/*公式不缩进*/
+div#launcher-pane .component,
+div#launcher-pane .icon-action {
+  color: #f0f4f4;
+}
+/*左侧多选时选中文字下划线*/
+span.fancytree-selected span.fancytree-title{
+   text-decoration:underline;
+}
+/*左侧导航栏*/
+div#launcher-pane .global-menu-button {
+  filter: invert(1);
 }
 
-.note-detail{
-   line-height:1.2;
+div#launcher-pane .global-menu-button:hover {
+  filter: invert(0);
 }
 
-.image-inline {
-   vertical-align: middle;
-}
-
-::selection {
-   background-color: rgba(70,130,180,0.7);
-   color: #fff;
-}
-.note-properties-widget{
-   padding:0px !important;
-}
-.basic-properties-widget > *{
-   margin-top:0px !important;
-}
-.basic-properties-widget{
-   padding: 0px 12px 0px 12px !important;
-}
-.component{
-   padding-top: 0px !important;
-padding-bottom: 0px !important;
-}
-.inherited-attributes-container{
-   padding:0px 12px 0px 12px !important;
-}
-.add-new-attribute-button{bottom:0px !important;}
 div#launcher-pane .icon-action:hover {
-   background-color: rgba(128,128,128, 0.5) !important;
+  background-color: rgba(220,220,220,0.5);
 }
 
-/* 滚动条滑块 */
-::-webkit-scrollbar-thumb {
-   border-radius:5px !important;
-   background:rgba(0,0,0,0.2) !important;
+/*搜索栏*/
+#left-pane input.search-string {
+   background: rgba(255, 255, 255, 0.3) !important;
 }
-#launcher-pane .icon-action{
-    padding-top: 15px !important;
+div.quick-search.input-group.input-group-sm.component{
+   align-content: center;
 }
-div#center-pane .note-book-card {
-    border:1px solid rgba(128,128,128, 0.5) !important;
-}
-div#center-pane .note-book-card:hover{
-    background-color: rgba(220,220,220,0.7);;/* 悬停时 修改背景色 */
-}
-
-/*公式字体*/
-span.katex *{
-    font-family: KaTeX_Main !important;
-    font:  KaTeX_Main,Times New Roman,serif  !important;
-}
-
-
-
-
-h1{
-   padding-left: 0.4em;
-   border-left: 9px solid rgba(0,0,0, 1);
-   border-bottom: 1px solid rgba(0,0,0, 1);
-}
-h2 {
-  background: rgba(43,102,149, 0.8);
-  border-radius: 6px 6px 6px 6px;
-  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-  color: #FFFFFF;
-   font-size: 18px;
-  /*font-family:"微软雅黑", "宋体", "黑体", Arial;
-  
-  height: 25px;
-  line-height: 25px; */  
-  font-weight: bold;
-  margin: 18px 0 !important;
-  padding: 8px 0 5px 5px;
-  text-shadow: 2px 2px 3px #222222;
-}
-h3 {
-  background: rgba(43,102,0,0.6);
-  border-radius: 6px 6px 6px 6px;
-  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-  color: #FFFFFF;
-  /*font-family:"微软雅黑", "宋体", "黑体", Arial;
-  font-size: 15px;
-  height: 24px;
-  line-height: 23px;
-  font-weight: bold;*/
-  margin: 12px 0 !important;
-  padding: 5px 0 5px 10px;
-  text-shadow: 2px 2px 3px #222222;
-}
-h4 {
-  background: rgba(89, 89, 89, 0.5);
-  border-radius: 6px 6px 6px 6px;
-  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-  color: #FFFFFF;
-  /*font-family:"微软雅黑", "宋体", "黑体", Arial;
-  font-size: 13px;
-  height: 24px;
-  line-height: 20px;
-  font-weight: bold;*/
-  margin: 12px 0 !important;
-  padding: 5px 0 5px 10px;
-  text-shadow: 2px 2px 3px #222222;
-}
- 
- 
-
-/* Fira Mono */
-@font-face {
- font-family: 'Fira Mono';
- font-style: normal;
- font-weight: 400;
- src: url('/custom/fonts/syhtn.woff2') format('woff2');
-}
-
-/* Fira Sans */
-@font-face {
- font-family: 'Fira Sans';
- font-style: light;
- font-weight: 300;
- src: url('/custom/fonts/syhtl.woff2') format('woff2');
-}
-@font-face {
- font-family: 'Fira Sans';
- font-style: regular;
- font-weight: 400;
- src: url('/custom/fonts/syhtr.woff2') format('woff2');
-}
-
-/* Fira Code */
-@font-face {
- font-family: 'Fira Code';
- font-style: normal;
- font-weight: 300;
- src: url('/custom/fonts/syhtn.woff2') format('woff2');
-}
-@font-face {
- font-family: 'Fira Code';
- font-style: normal;
- font-weight: 600;
- src: url('/custom/fonts/syhtb.woff2') format('woff2');
-}
-
-/* Roboto-slab */
-@font-face {
- font-family: 'Roboto Slab';
- font-style: normal;
- font-weight: 200;
- src: url('/custom/fonts/syhtr.woff2') format('woff2');
-}
-@font-face {
- font-family: 'Roboto Slab';
- font-style: normal;
- font-weight: 300;
- src: url('/custom/fonts/syhtn.woff2') format('woff2');
-}
-@font-face {
- font-family: 'Roboto Slab';
- font-style: normal;
- font-weight: 400;
- src: url('/custom/fonts/syhtm.woff2') format('woff2');
-}
-@font-face {
- font-family: 'Roboto Slab';
- font-style: normal;
- font-weight: 600;
- src: url('/custom/fonts/syhth.woff2') format('woff2');
-}
-
-
-
-html {
-/* ----------------------------------------------------------------------------- */
-/* COLOR VARIABLES
-/* ----------------------------------------------------------------------------- */
-  --color-blue-dark: #2e4b76;
-   --color-blue-dark-alpha: #2e4b76d1;  
-   --color-blue-dark-text: #e8f1f5;
-   --color-blue-light: #4682B4;
-   --color-blue-light-alpha: #4682B470;
-   --color-blue-light-alpha-darker: #4682B4d1;
-   --color-blue-light-alpha-lighter: #2aa19229;
-   --color-blue-light-text: #f0f4f4;
-   --color-blue-light-gradient-1: #4ea596;
-   --color-blue-light-gradient-2: #2ba090;
-   --color-yellow: #e9c46a;
-   --color-yellow-darker: #ecb400;
-   --color-yellow-text: #63583c;
-   --color-yellow-bg-alpha: #e9c46a1a;
-   --color-sidebar-yellow-dark: #e1dbce;
-   --color-orange-light: #f4a261;
-   --color-orange-light-text: #c96a2e;
-   --color-orange-dark: #e76f51;
-   --color-orange-dark-text: #f2dcd6;
-   --color-gray: #d6d6d6;
-   --color-gray-text: #000000;/*原来#333*/
-   --color-gray-text-code: #555;
-   --color-gray-light: #f5f5f5;
-   --color-gray-light-alpha: rgba(199, 199, 199, 0.2);
-   --color-gray-light-text: #999;
-   --color-gray-medium: #868E8D;
-   --color-gray-light-buttons: #e9e9e9;
-   --color-gray-light-buttons-text: #434343;
-   --color-gray-dark: #666;
-   --color-gray-dark-text: #666;/**/
-   --color-paper: #ecebe3;
-   --color-paper-text: #555;
-   --color-paper-light: #fcfcfa;
-   --color-paper-light-cool: #fcfcfd;
-   --color-shadow: rgba(181, 181, 181, 0.6);
-   --color-shadow-light: rgba(181, 181, 181, 0.3);/**/
-    
-   
-/* ----------------------------------------------------------------------------- */
-/* BORDER & SHADOW VARIABLES
-/* ----------------------------------------------------------------------------- */
-   
-   --border-radius-small: 2px;
-   --border-radius-tabs: 2px;
-   --border-radius-large: 10px;
-   --border-standard: 1px solid var(--color-gray);
-   --border-accent: 2px solid var(--color-orange-dark);
-   --border-accent-alt: 2px solid var(--color-blue-light);
-   --border-accent-muted: 2px solid var(--color-gray-dark);
-   --border-accent-light: 1px dotted var(--color-blue-dark-text);
-   
-   --shadow-light: 3px 4px 3px -3px var(--color-shadow-light);
-   --shadow-standard: 3px 4px 3px -3px var(--color-shadow);
-   --shadow-accented: 2px 2px 5px -2px var(--color-gray-dark);
-   --shadow-90deg: 0 3px 5px -3px var(--color-shadow);
-
-/* ----------------------------------------------------------------------------- */
-/* FONT VARIABLES
-/* ----------------------------------------------------------------------------- */
-   
-   --main-font-family-sans:  'Fira Sans', 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Arial, Sans-serif;
-   --main-font-family-serif: 'Roboto Slab', Georgia, Serif;
-   --main-font-family-mono: 'Fira Mono', 'Source Code Pro', Courier, Monospace;
-   --detail-text-font-family: 'Fira Sans', 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Arial, Sans-serif;
-   --font-family-monospace: 'Fira Mono', 'Source Code Pro', Courier, Monospace;
-   --font-headers: 'Roboto Slab', Georgia, Serif;
-   --font-body: 'Fira Sans', 'Open Sans', 'Source Sans Pro', 'Liberation Sans', Arial, Sans-serif;
-   --font-code: 'Fira Code', 'Source Code Pro', Courier, Monospace;
-}
-
-#root-widget {
- /* FF basic styling */
- scrollbar-color: var(--color-gray-medium) var(--color-gray-light);
- scrollbar-gutter: 5px;
-}
-
-
-/* ----------------------------------------------------------------------------- */
-/* RESET
-/* ----------------------------------------------------------------------------- */
-
-#root-widget *, .modal-content, :not(.ribbon-body *), form input{
- font-family: var(--main-font-family-sans);
- border-radius: var(--border-radius-small);
-}
-
-
-#root-widget :is(h1, h2, h3, h4, h5, h6),
-.modal-content :is(h1, h2, h3, h4, h5, h6) {
- /*border-bottom: none;*/
- /*自定义添加color: var(--color-blue-dark);*/
- font-family: var(--main-font-family-sans);/*自己之前是--main-font-family-serif*/
- margin-top: 1.0rem;/*本来1.6*/
- margin-bottom: .3rem;
-}
-
-#root-widget a {
- color: var(--color-blue-dark);
-}
-
-
-span.edited-note-line {
- /*自己*/padding: 0 .5rem 0 0;
- display: flex;
-}
-span.edited-note-line small {
- color: var(--color-gray-dark);
- margin-right: 2px;
- margin-left: 2px;
-}
-
-div#rest-pane.component div#center-pane .title-row {
-
-}
-
-
-/* ----------------------------------------------------------------------------- */
-/* CodeMirror
-/* ----------------------------------------------------------------------------- */
-
-
-div#root-widget div#rest-pane div#center-pane div.note-detail div.note-detail-code div.note-detail-code-editor div.CodeMirror-code span {
- /*color: var(--color-gray-text-code);*/
-   font-family: var(--font-code);
-}
-div.CodeMirror span.cm-atom {
- color: var(--color-gray-text-code);
-}
-div.CodeMirror span.cm-builtin {
- color: var(--color-gray-text-code);
-}
-div.CodeMirror span.cm-callee {
- color: var(--color-yellow-text);
-}
-div.CodeMirror span.cm-comment {
- color: #ecb400;/*var(--color-yellow-darker)*/
- padding: 5px 2px;
- margin: -5px -2px;
-}
-div.CodeMirror span.cm-def {
- color: var(--color-gray-text-code);  
-}
-div.CodeMirror span.cm-keyword {
- color: var(--color-gray-text-code);  
-}
-div.CodeMirror span.cm-matchhighlight {
- color: var(--color-gray-text-code);  
-}
-div.CodeMirror span.cm-number {
- color: var(--color-gray-text-code);
-}
-div.CodeMirror span.cm-operator {
- color: var(--color-gray-text-code);
-}
-div.CodeMirror span.cm-overlay {
- color: var(--color-gray-text-code);
-}
-div.CodeMirror span.cm-property {
-   color: var(--color-paper-text);
-   text-decoration: underline;
-   text-decoration-color: var(--color-gray);
-   text-decoration-style: dotted;
-}
-div.CodeMirror span.cm-variable {
- color: var(--color-blue-dark);
-}
-div.CodeMirror span.cm-variable-2 {
- color: var(--color-blue-light);
-}
-div.CodeMirror span.cm-variable-3 {
- color: var(--color-gray-text-code);
-}
-div.CodeMirror span.cm-qualifier {
- color: var(--color-gray-text-code);
-}
-div.CodeMirror span.cm-string {
- color: var(--color-orange-dark);  
-}
-div.CodeMirror span.cm-string-2 {
- color: var(--color-gray-text-code);  
-}
-div.CodeMirror span.cm-tag {
- color: var(--color-gray-text-code);
-}
-
-.note-detail-code-editor div.CodeMirror-selected,
-.note-detail-code-editor div.CodeMirror-line::selection {
- background-color: var(--color-blue-light-alpha);
-}
-
-.CodeMirror-matchingbracket {
- text-decoration: none;
- color: var(--color-orange-dark) !important;
- border: 1px solid var(--color-gray);
-}
-/* ----------------------------------------------------------------------------- */
-/* HYPERLINKS
-/* ----------------------------------------------------------------------------- */
-
-a, a:visited, a:hover,
-.note-detail a, .note-detail a:hover,
-.modal-dialog a, .modal-dialog a:hover,
-.note-paths-widget a, .note-paths-widget a:hover,
-.similar-notes-widget a, .similar-notes-widget a:hover,
-.related-notes-container a, .related-notes-container a:hover,
-div.tooltip a,
-li a, li a:visited, li a:hover
-{
-   color: var(--color-blue-dark);
-   border-bottom: 1px solid var(--color-orange-dark);
-   border-radius: 0;
-   text-decoration: none;
-}
-
-a:hover,
-.note-detail a:hover,
-.modal-dialog a:hover,
-.note-paths-widget a:hover,
-.similar-notes-widget a:hover,
-.related-notes-container a:hover {
-   border-bottom: 1px solid var(--color-blue-light);
-   border-radius: 0;
-   color: var(--color-blue-light);
-   text-decoration: none;
-}
-
-
-/* ----------------------------------------------------------------------------- */
-/* MODALS
-/* ----------------------------------------------------------------------------- */
-
-/* ----------- RECENT CHANGES ----------- */
-div#recent-changes-content div {
- margin-bottom: 2rem;
-}
-
-div#recent-changes-content div ul {
- margin-left: .5rem;
- margin-top: .5rem;
- padding-left: 0;
-}
-
-div#recent-changes-content div ul li {
- list-style-type: none;
- margin-bottom: .3rem;
-}
-
-div#recent-changes-content div ul li span {
- color: var(--color-blue-light);
- font-family: var(--main-font-family-serif);
-}
-
-div#recent-changes-content div ul li span small {
- color: var(--color-gray-light-text);
- display: block;
- margin-left: 0rem;
-}
-
-div#recent-changes-content div b {
- border-bottom: 1px solid var(--color-gray);
- color: var(--color-blue-dark);
- display: block;
- font-family: var(--main-font-family-serif);
- font-weight: normal;
-}
-
-
-
-/* ----------------------------------------------------------------------------- */
-/* COMPONENTS
-/* ----------------------------------------------------------------------------- */
-
-/* ----------- GUTTER ----------- */
-
+/*左侧折叠箭头*/
+span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before{
+   content: "\ec21" !important;
+   visibility: visible !important;
+   color: rgba(51,51,51,0.15) !important;
+} 
+/*左右空隙*/
 div#root-widget div.gutter-horizontal {
  background: var(--color-gray-light);
- /*! width: 5px !important; */
+ width: 5px !important;
  border-left: var(--border-standard);
  border-radius: 0;
- padding-right: 0.5rem;
+ padding-right: 0.3rem;
  border-right: var(--border-standard);
 }
 
-
-
-/* -----------LEFT PANE -------------- */
-div#left-pane {
- background-color: var(--color-paper-light-cool);
+/*标题字体
+.note-icon-widget.dropdown.component{
+   padding-top:3px !important;
+}*/
+#center-pane .title-row .note-icon-widget button {
+   display: flex;
+   color: var(--color-blue-light);
+   /*padding: 5px;*/
+   margin:0;
+}
+#center-pane .title-row .note-title-widget input.note-title {
+ color: var(--color-blue-dark) !important;
+}
+input.note-title{
+   font-family:var(--detail-font-family) !important;
+   font-weight:bold;
+}
+.bx-dock-right::before{
+   vertical-align: middle;
 }
 
-
-
-/* ----------- DROPDOWN MENU ----------- */
-
-div#root-widget div#left-pane .dropdown-menu a {
-   color: var(--color-dark-blue);
+/*标题栏上划线
+div.ribbon-tab-container{
+   border-top: 1px solid var(--main-border-color);
 }
+*/
+/*笔记字体
+#root-widget *, .modal-content, :not(.ribbon-body *), form input{
+   font-family: var(--main-font-family-sans);
+}*/
 
-a.dropdown-item {
- border-bottom: none;
-}
-div#root-widget div#launcher-pane div.dropdown div.dropdown-menu span.bx {
- color: var(--color-blue-dark);
-}
-
-div#root-widget div#launcher-pane div.dropdown div.dropdown-menu a {
- color: var(--color-blue-dark);
-}
-
-div#root-widget div#rest-pane .dropdown-menu a:hover:not(.disabled), .dropdown-item:hover:not(.disabled),
-div#root-widget div#rest-pane div#center-pane div.ribbon-container div.ribbon-top-row div.ribbon-button-container div.dropdown.show div.dropdown-menu a.dropdown-item.show-source-button:hover kbd{
- background-color: var(--color-blue-light-alpha) !important;
- color: var(--color-blue-light-gradient-2) !important;
-}
-
-
-
+/*标签栏样式*/
 /* ----------- TABS ----------- */
-
-div#root-widget div#rest-pane > div.component:first-child {
- border-bottom: var(--border-standard);
- height: 30px !important;
+html{
+   --color-blue-light: #4682B4;
+   --color-blue-light-alpha: #4682B470;
+   --color-gray: #d6d6d6;
+   --color-gray-light: #f5f5f5;
+   --color-gray-light-text: #999;
+   --color-gray-light-alpha: rgba(199, 199, 199, 0.2);
+   --border-standard: 1px solid var(--color-gray);
+   --color-blue-dark: #2e4b76;
+   --link-color: #4682B4 !important;
+   --detail-font-family:'syht' !important;
 }
-
-div#root-widget div#rest-pane div.tab-row-widget {
- padding-bottom: .3rem;
+.tab-row-widget .note-tab .note-tab-title{
+   height: 30px;
 }
-
-div#root-widget div#rest-pane div.tab-row-widget-container {
- height: 30px;
-}
-
 div#root-widget div#rest-pane div.tab-row-widget div.note-new-tab {
- 
- height: 100%;
- margin: 0;
- display: flex;
- align-items: center;
- justify-content: center;
- color: var(--color-gray-dark);
- background-color: var(--color-gray-light-alpha);
- border-radius: 0;
- margin-left: 5px;
- /*! padding: 5px; */
+   color: var(--color-gray-dark);
+   background-color: var(--color-gray-light-alpha);
 }
 
 div#root-widget div#rest-pane div.tab-row-widget div.note-new-tab:hover {
- color: var(--color-blue-light);
- background-color: var(--color-blue-light-alpha);
-}
-
-.tab-row-widget .note-tab .note-tab-title {
-   
+   color: var(--color-blue-light);
+   background-color: var(--color-blue-light-alpha);
 }
 
 div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab div.note-tab-wrapper {
    background-color: var(--color-gray-light);
    color: var(--color-gray-light-text);
-   align-items: center;
-   height: 30px;
-   border-radius: 0;
 }
 
 div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab div.note-tab-wrapper:hover {
-   background-color: var(--color-blue-light);
-   color: var(--color-blue-light-text);
-
+   background-color: var(--color-blue-light-alpha);
 }
 
-div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab div.note-tab-wrapper > div:hover {
- background: none;
+div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab div.note-tab-wrapper>div:hover {
+   background: none;
 }
-
-div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab div.note-tab-wrapper > div {
- height: 30px;
- align-items: center;
- display: flex;
- padding: 0;
- 
-}
-
-div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab div.note-tab-wrapper > div span {
- top: unset;
-}
-
 
 div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab[active] .note-tab-wrapper {
- color: var(--color-blue-light);
- background-color: var(--color-blue-light-alpha);
-   font-weight: 600;
+   color: var(--color-blue-light);
+   background-color: var(--color-blue-light-alpha);
 }
 
 div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab[active] .note-tab-wrapper div.note-tab-title::before {
- /*! content: "\203B  "; */ /* reference mark */
- /*! content: "\1F348  "; */ /* melon */
- content: "\203B "; /* lemon */
- margin-right: 5px;
+   content: "\203B ";
+   margin-right: 5px;
+}
+/*左侧悬停背景色*/
+li.fancytree-lastsib ul li[role='treeitem']:hover {
+    background: rgba(70, 130, 180, 0.2) !important;
+   /*background: rgba(70, 130, 180, 0.2) !important;*/
+}
+span.fancytree-node.fancytree-expanded.fancytree-folder:hover{
+   background: rgba(70, 130, 180, 0.2) !important;
 }
 
-div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab[active] .note-tab-wrapper div.note-tab-title::after {
-   /*content: " \203B";*/
+/*左侧面板墙纸*/
+#left-pane.component {
+   background-image: url("/custom/background.png");
 }
 
-
-
-/* ----------- TREE ----------- */
-
-div#root-widget div#left-pane div.tree ul#ft-id-1 {
- margin-left: .4rem;
- margin-right: .7rem;
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n) {
+   border-left: 4px solid #f4a6a6 !important;
+   border-radius: 10px !important;
 }
 
-div#root-widget div#left-pane span.fancytree-node:hover {
-   background-color: #2aa19229;
-   border: 1px dotted var(--color-blue-light);
- color: var(--color-blue-light);
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) {
+   border-left: 4px solid #99d0df !important;
+   border-radius: 10px !important;
 }
 
-div#root-widget div#left-pane .fancytree-node {
-height: 36px; padding: 2px 4px 5px;
- font-family: var(--main-font-family-serif);
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) {
+   border-left: 4px solid #b4afdf !important;
+   border-radius: 10px !important;
 }
 
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) {
+   border-left: 4px solid #abd58b !important;
+   border-radius: 10px !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) {
+   border-left: 4px solid #f3d275 !important;
+   border-radius: 10px !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
+   border-left: 4px solid #bccdf1 !important;
+   border-radius: 10px !important;
+}
+
+/*左侧面板选中背景色*/
 div#root-widget div#left-pane span.fancytree-node.fancytree-active {
- /*background-color: rgba(220,220,220,0.7) !important;自己注释了*/
- border: none !important;
- /*! font-family: var(--main-font-family-serif); */
+   background-color: rgba(70, 130, 180, 0.3) !important;
+   border-radius: 10px !important;
+   border: 0px  !important;
 }
 
-div#root-widget div#left-pane span.fancytree-node.fancytree-node span {
- font-family: var(--main-font-family-serif);
+span.button-widget.icon-action.bx.component.bx-history,
+.ribbon-button-container .icon-action {
+   padding-top: 5px !important;
+}
+span.fancytree-node:hover{
+      border: 0px !important;
 }
 
-div#root-widget div#left-pane span.fancytree-node.fancytree-active:not(span.fancytree-node.imp) span {
-     color: var(--color-blue-dark);/*自定义*/
+.title-bar-buttons div button.icon-action {
+   font-size: 80% !important;
 }
 
-div#root-widget div#left-pane span.fancytree-node.protected > span.fancytree-custom-icon {
- /* remove shadow from protected notes icon */
- filter: none;
- color: var(--color-gray-medium);
+p {
+   margin-top: 0.1rem !important;
+   margin-bottom: 0.1rem !important;
+   /*首行缩进*/
+   text-indent: 2em;
+   /*两端对齐*/
+     text-align: justify;
+      word-break: break-all;
+      text-justify: distribute;
 }
 
-div#root-widget div#left-pane span.fancytree-node.multiple-parents .fancytree-title::after {
- /* cloned notes icon */
- content: " \1F517";
- font-size: .8rem;
- color: var(--color-blue-light);
+blockquote>p {
+   text-indent: 0em;
 }
 
-
-
-/* ----------- CONTEXT MENU ----------- */
-
-#context-menu-container {
- font-family: var(--main-font-family-sans);
+p>span.ck-math-tex {
+   text-indent: 0em;/*公式不缩进*/
 }
 
-
-
-/* ----------- LAUNCHER PANE ----------- */
-
-div#launcher-pane {
-   background-color: var(--color-blue-light);
+/*行间距*/
+.note-detail {
+   line-height: 1.25;
 }
 
-div#launcher-pane .component,
-div#launcher-pane .icon-action {
-   color: var(--color-blue-light-text);
+/*图片居中*/
+.image-inline {
+   vertical-align: middle;
+}
+/*图片*/
+.ck-content .image{
+   margin: 0.1rem auto !important;
 }
 
-div#launcher-pane .global-menu-button {
-   /*background-image: url('/custom/images/icon-white2.png');*/
-   filter: invert(1);
+::selection {
+   background-color: rgba(70, 130, 180, 0.7);
+   color: #fff;
 }
 
-div#launcher-pane .global-menu-button:hover {
-   /*background-image: url('/custom/images/icon-white2.png');*/
-   filter: invert(0);
+.note-properties-widget {
+   padding: 0px !important;
+}
+
+/*.basic-properties-widget>* {
+   margin-top: 0px !important;
+}*/
+
+.basic-properties-widget {
+   padding: 0px 12px 0px 12px !important;
+}
+
+.component {
+   padding-top: 0px !important;
+   padding-bottom: 0px !important;
+}
+
+.inherited-attributes-container {
+   padding: 0px 12px 0px 12px !important;
+}
+
+.add-new-attribute-button {
+   bottom: 0px !important;
 }
 
 div#launcher-pane .icon-action:hover {
-   background-color: var(--color-gray-text);
+   background-color: rgba(128, 128, 128, 0.5) !important;
 }
 
-.tooltip-inner {
-   font-family: var(--main-font-family-sans);
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+   border-radius: 5px !important;
+   background: rgba(0, 0, 0, 0.2) !important;
 }
 
-
-/* ----------- RIBBON ----------- */
-
-div#rest-pane.component div#center-pane div.ribbon-body.active {
- background-color: var(--color-gray-light);
- margin-left: 0;
- margin-right: 0;
+#launcher-pane .icon-action {
+   padding-top: 15px !important;
 }
-
-div#rest-pane.component div#center-pane div.attribute-list {
- margin-top: 0;
-}
-
-div#rest-pane.component div#center-pane div.ribbon-tab-container {
- justify-content: start;
- margin-left: 0;
-}
-
-div#rest-pane.component div#center-pane div.ribbon-container {
- margin-bottom: 0px;
- padding-bottom: 5px;
-}
-
-div#rest-pane.component div#center-pane div.ribbon-body-container,
-div#rest-pane.component div#center-pane div.ribbon-body-container p,
-div#rest-pane.component div#center-pane div.ribbon-body-container div.inherited-attributes-container span {
- font-family: var(--main-font-family-mono) !important;
- 
-}
-
-div#rest-pane.component div#center-pane div.ribbon-body-container div.component {
- font-size: 1rem;
-}
-
-div#rest-pane.component div#center-pane span.bx {
- font-family: boxicons !important;
-}
-
-div#rest-pane.component div#center-pane div.split-note-container-widget div.ribbon-container div.ribbon-tab-title {
- 
-}
-
-div#rest-pane.component div#center-pane div.split-note-container-widget div.ribbon-container div.ribbon-top-row {
- border: 1px solid var(--color-gray);
-   /*! padding: 0.3rem .3rem 0rem; */
- justify-content: space-between;
- border-left: none;
- border-right: none;
- /*! box-shadow: var(--shadow-90deg); */
-}
-
-div#rest-pane.component div#center-pane .ribbon-button-container {
- border: none;
-   padding: 0.3rem .3rem 0rem;
- justify-content: end;
- align-content: end;
-}
-div#rest-pane.component div#center-pane .ribbon-button-container button {
-
-}
-div#rest-pane.component div#center-pane div.split-note-container-widget div.ribbon-container div.ribbon-tab-spacer,
-div#rest-pane.component div#center-pane div.split-note-container-widget div.ribbon-container div.ribbon-tab-title {
- border-radius: 0;
- padding: 0.3rem 1rem;
- border-bottom: none;
-
-}
-
-div#rest-pane.component div#center-pane div.split-note-container-widget div.ribbon-container div.ribbon-tab-spacer {
- display: none;
- max-width: 0;
- 
-}
-
-div#rest-pane.component div#center-pane div.split-note-container-widget div.ribbon-container div.ribbon-tab-title.active {
- background-color: var(--color-gray-light);
- color: var(--color-blue-dark-alpha);
- font-weight: bold;
- /*! border-bottom: none; */
-}
-
-div#rest-pane.component div#center-pane div.split-note-container-widget div.ribbon-container div.ribbon-tab-title:hover {
- background-color: var(--color-blue-light-alpha);
- color: var(--color-blue-light);
-}
-
-div#rest-pane.component div#center-pane div.split-note-container-widget div.ribbon-container div.ribbon-tab-title.active:hover {
- background-color: var(--color-blue-light-alpha);
- color: var(--color-blue-light);
-}
-
-div#root-widget div#center-pane .note-paths-widget a {
- font-weight: 400;
-}
-
-div#root-widget div#center-pane .note-paths-widget ul {
- padding: .4rem 0;
-}
-
-div#root-widget div#center-pane .note-paths-widget li {
- list-style-type: none;
- 
-}
-
-div#root-widget div#center-pane .note-paths-widget li::before {
- content: "\29FD  ";
- color: var(--color-orange-dark);
-}
-
-div#rest-pane.component div#center-pane .button-widget.icon-action {
- color: var(--color-gray-medium);
-}
-
-
-/* ----------- FORM ELEMENTS ----------- */
-
-div#root-widget div#center-pane button:not(.bx) {
-   background-color: var(--color-gray-light-buttons);  
-   box-shadow: var(--shadow-light);
-   border-radius: var(--border-radius-small);
-   border: none;
-   color: var(--color-gray-light-buttons-text);
-   font-family: var(--main-font-family-serif);
-   padding: 0.2rem .8rem;
-   margin: .2rem;
-}
-
-div#root-widget div#center-pane button:not(.bx).btn-primary {
-   background-color: var(--color-orange-dark);
-}
-
-div#center-pane button:not(.bx).btn-secondary {
-   background-color: var(--color-gray-dark);
-}
-
-div#center-pane .switch {
- background: none;
-}
-
-div#center-pane .switch .slider {
- /*slider background*/
- background-color: var(--color-gray-light-buttons);
- box-shadow: var(--shadow-light);
- border-radius: var(--border-radius-small);
-}
-
-div#center-pane .switch .slider::before {
- /*slider off state*/
- background-color: var(--color-gray-light-buttons-text);
- border-radius: var(--border-radius-small);
-}
-
-div#center-pane .switch .slider.checked::before {
- /*slider on state*/
- background-color: var(--color-blue-light);
- border-radius: var(--border-radius-small);
-}
-
-input#clone-to-note-autocomplete,
-.algolia-autocomplete {
- font-family: var(--main-font-family-serif);
-}
-
-/* checkbox background*/
-.ck-content .todo-list .todo-list__label > input[checked]::before {
- background: var(--color-blue-dark-alpha);
- border-radius: var(--border-radius-small);
-}
-
-
-#left-pane input.search-string {
- background: white !important;
- border: 1px solid var(--color-blue-light);
- border-radius: var(--border-radius-small);
- border: var(--border-accent-light);
- box-shadow: var(--shadow-light) inset;
-   margin-right: 10px;
-}
-
-#left-pane div.quick-search {
- border-bottom: var(--border-standard);
- padding: unset;
-
- align-content: center;
- align-items: center;
-}
-
-#left-pane div.quick-search button {
- padding: unset;
- align-self: center;
- margin: 0 10px;
-}
-
-
-div#root-widget div#rest-pane div#center-pane div.split-note-container-widget div.note-split.component {
- margin-left: 0;
- border-right: var(--border-standard);
- /*! border-left: var(--border-standard); */
-}
-
-
-/* ----------- NOTEBOOK CARDS ----------- */
 
 div#center-pane .note-book-card {
-   background-color: white;
-   border: var(--border-standard) ;/*!important;  !important*/
-   border-radius: var(--border-radius-small);
-   /*! box-shadow: var(--shadow-standard); */
-   margin: 5px;
-   margin-bottom: 1rem;
-   padding: .5rem 1rem;
+   border: 1px solid rgba(128, 128, 128, 0.5) !important;
 }
 
-.note-book-card.expanded > .note-book-title {
-   font-weight: 500;
-}
+/* 笔记卡片
+div#center-pane .note-book-card:hover {
+   background-color: rgba(220, 220, 220, 0.7);
+}*/
 
-.note-book-card :is(h1, h2, h3, h4, h5) {
-   font-size: 1rem;
-}
-
-div#center-pane .note-list-container div.note-book-card h5.note-book-title {
- margin-top: 0;
-}
-
-.note-list-widget .note-list-widget-content .note-list .note-book-card {
-   background-color: white;
-}
-
-.note-list-widget .note-list-widget-content .note-list .note-book-card:hover {
-   background-color: white;
-   box-shadow: var(--shadow-standard);
-}
-
-.note-list-widget .note-list-widget-content .note-list .note-book-card h5 {
-   color: var(--color-blue-dark);  
-   width: max-content;
-}
-
-.note-list-widget .note-list-widget-content .note-list .note-book-card h5 span.rendered-note-attributes {
-   display: none;  /* hide note attributes */
-}
-
-.note-list-widget .note-list-widget-content .note-list .note-book-card .note-book-content {
-   
-}
-
-.note-list-widget .note-list-widget-content .note-list .note-book-card .note-book-content a,
-.note-list-widget .note-list-widget-content .note-list .note-book-card h5 a {
-   color: var(--color-blue-dark)
-}
-
-.note-list-widget .note-list-widget-content .note-list .note-book-card .note-book-content .rendered-note-content {
-   color: var(--color-gray-dark);
-}
-
-
-
-/* ----------- NOTES ----------- */
-
-#center-pane .backlinks-ticker {
- background-color: var(--color-gray-light);
- color: var(--color-gray-dark-text);
- border: var(--border-accent-light);
- top: 0;
- right: 12px;
- width: fit-content;
-}
-
-#center-pane .backlinks-items div :is(h2, h3, h4, h5, h6) {
- font-size: 1.1rem;
-}
-
-#center-pane .backlinks-ticker span.backlinks-count {
- font-family: var(--main-font-family-mono);
- font-size: .95rem;
-
-}
-
-#center-pane .title-row {
-   /*我注释的min-height: 4.5rem;*/
-   display: flex;
-   align-items: center;
- /*我注释的 margin-bottom: 0.5rem;*/
-   /*! box-shadow: -3px 3px 3px -3px gray inset; */
-}
-
-#center-pane .title-row .note-icon-widget {
- 
- /*! align-content: baseline; */
- display: flex;
- margin: 0;
- padding: 5px;
- 
-}
-
-#center-pane .note-detail {
- /*! border: 1px solid var(--color-gray); */
- padding: 0.5rem 0.2rem;
- /*! margin-top: .8rem; */
-}
-
-#center-pane .note-list-widget div.note-list.list-view,
-#center-pane .note-list-widget div.note-list.grid-view {
- margin: 1rem .5rem .5rem 0;
- padding: 0;
-}
-
-#center-pane .title-row .note-icon-widget button {
- color: var(--color-blue-light);
-}
-
-#center-pane .title-row .note-title-widget {
-   align-self: center;
-   display: flex;
-   align-items: center;
-}
-
-#center-pane .title-row .note-title-widget input.note-title {
-   color: var(--color-blue-dark) !important;
-   font-family: var(--main-font-family-serif);
-   font-weight: 600;
-   font-size: 2rem;
- /*! box-shadow: none; */
- 
-}
-
-#center-pane .title-row .note-title-widget input.note-title.protected {
- text-shadow: none;
- color: var(--color-gray-medium) !important;
-}
-
-#center-pane .title-row .note-title-widget input.note-title.protected {
- 
-}
-
-#center-pane .note-detail h2:first-of-type {
-   margin-top: auto;
-}
-
-#center-pane .note-detail p {
- color: var(--color-gray-text);
-}
-
-#center-pane .note-detail p a {
- color: var(--color-blue-dark);
- border-bottom: 1px solid var(--color-orange-dark);
-}
-
+/*代码块*/
 #center-pane div.note-detail-editable-text div.note-detail-editable-text-editor.ck.ck-content pre,
 #center-pane .CodeMirror pre code {
- color: var(--color-blue-dark) !important;
- padding: 0.5em;/*原来1.5em*/
- margin: 1.0rem auto 0.5rem;/*原来margin: 1.0rem auto 2.5rem;*/
- background-color: var(--color-gray-light);
- border: 1px dotted var(--color-gray);
-}
-
-#center-pane code {
- font-family: var(--main-font-family-mono);
-}
-
-div#root-widget div#rest-pane div#center-pane div.note-detail img {
-/*自己注释的 border: 1px solid var(--color-gray);
- padding: .5rem;*/
-}
-
-figcaption {
- font-style: italic;
+   color: var(--color-blue-dark) !important;
+   padding: 0.5em;
+   /*原来1.5em*/
+   margin: 1.0rem auto 0.5rem;
+   /*原来margin: 1.0rem auto 2.5rem;*/
+   background-color: var(--color-gray-light);
+   border: 1px dotted var(--color-gray);
 }
 
 
+/*公式字体*/
+span.katex * {
+   font-family: KaTeX_Main !important;
+   font: KaTeX_Main, Times New Roman, serif !important;
+}
 
+/*heading样式*/
+h1 {
+   padding-left: 0.4em;
+   border-left: 9px solid rgba(0, 0, 0, 1);
+   border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
 
+h2 {
+   background: rgba(43, 102, 149, 0.8);
+   border-radius: 6px 6px 6px 6px;
+   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+   color: #FFFFFF;
+   font-size: 18px;
+   padding: 8px 0 5px 5px;
+   text-shadow: 2px 2px 3px #222222;
+}
 
+h3 {
+   background: rgba(43, 102, 0, 0.6);
+   border-radius: 6px 6px 6px 6px;
+   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+   color: #FFFFFF;
+   padding: 5px 0 5px 10px;
+   text-shadow: 2px 2px 3px #222222;
+}
 
-
+h4 {
+   background: rgba(89, 89, 89, 0.5);
+   border-radius: 6px 6px 6px 6px;
+   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+   color: #FFFFFF;
+   padding: 5px 0 5px 10px;
+   text-shadow: 2px 2px 3px #222222;
+}
+h1, h2, h3, h4, h5, h6{
+   margin-top:.3rem !important;
+   margin-bottom: .15rem !important;
+}
