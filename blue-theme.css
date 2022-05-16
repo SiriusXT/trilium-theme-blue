@@ -11,6 +11,7 @@ div#toast-container{
 }
 
 
+
 body,span.fancytree-title{
    font-family:var(--detail-font-family) !important;
 }
@@ -108,14 +109,19 @@ html{
    --color-blue-dark: #2e4b76;
    --link-color: #4682B4 !important;
 }
-.tab-row-widget .note-tab .note-tab-title{
-   height: 30px;
-}
+
 div#root-widget div#rest-pane div.tab-row-widget div.note-new-tab {
    color: var(--color-gray-dark);
    background-color: var(--color-gray-light-alpha);
 }
-
+.note-new-tab{
+   width: 30px !important;
+   height: 30px !important;
+   font-size: 19px !important;
+}
+.tab-row-widget .note-tab .note-tab-close span{
+   font-size: 23px !important;
+}
 div#root-widget div#rest-pane div.tab-row-widget div.note-new-tab:hover {
    color: var(--color-blue-light);
    background-color: var(--color-blue-light-alpha);
@@ -124,6 +130,8 @@ div#root-widget div#rest-pane div.tab-row-widget div.note-new-tab:hover {
 div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab div.note-tab-wrapper {
    background-color: var(--color-gray-light);
    color: var(--color-gray-light-text);
+   padding: 3px 5px 1px 5px !important;
+   height: 30px !important;
 }
 
 div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab div.note-tab-wrapper:hover {
@@ -319,6 +327,9 @@ span.katex * {
 }
 blockquote>p{
    margin-bottom: 0 !important;
+}
+dl, ol, ul{
+   margin-bottom: 0.1rem !important;
 }
 
 
