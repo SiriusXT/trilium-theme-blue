@@ -1,6 +1,4 @@
-/*
-https://github.com/SiriusXT/trilium-theme-blue
-*/
+
 div#toast-container{
    right:0px !important;
    bottom:0px !important;
@@ -8,7 +6,14 @@ div#toast-container{
    width:auto !important;
 }
 
+.switch-widget span.slider.checked{
+   background-color:var(--color-blue-light) !important;
+}
 
+
+body,span.fancytree-title{
+   font-family:var(--detail-font-family) !important;
+}
 span:not(.fancytree-active) span.fancytree-title{
    font-weight: 500 !important;
 }
@@ -84,6 +89,11 @@ input.note-title{
 
 
 
+
+
+button.ck.ck-block-toolbar-button{
+   background-color: rgba(255,255,255,0);
+}
 
 
 
@@ -203,7 +213,7 @@ p {
    text-indent: 2em;
    
      text-align: justify;
-      word-break: break-all;
+      
       text-justify: distribute;
 }
 
@@ -226,7 +236,7 @@ p>span.ck-math-tex {
 }
 
 .ck-content .image{
-   margin: 0.1rem auto !important;
+   margin: 0.1 auto !important;
 }
 
 ::selection {
@@ -294,6 +304,21 @@ div#center-pane .note-book-card {
 span.katex * {
    font-family: KaTeX_Main !important;
    font: KaTeX_Main, Times New Roman, serif !important;
+}
+
+
+
+
+.ck-content blockquote{
+   font-style: initial !important;
+   color: #2C3E50  !important;
+   border-left: 5px solid #D6DBDF  !important;
+   background: none repeat scroll 0 0 rgba(102,128,153,.05)  !important;
+   padding: 2px 1.7em 5px !important;
+   margin: 0.2rem 0 0 0 !important;
+}
+blockquote>p{
+   margin-bottom: 0 !important;
 }
 
 
