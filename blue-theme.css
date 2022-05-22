@@ -1,8 +1,4 @@
-/*
-Blue theme 
-https://github.com/SiriusXT/trilium-theme-blue
-version:0.2
-*/
+
 
 
 div#toast-container{
@@ -15,6 +11,7 @@ div#toast-container{
 .switch-widget span.slider.checked{
    background-color:var(--color-blue-light) !important;
 }
+
 
 
 
@@ -219,7 +216,7 @@ li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
 }
 
 
-div#root-widget div#left-pane span.fancytree-node.fancytree-active {
+span.fancytree-node.fancytree-active {
    background-color: rgba(70, 130, 180, 0.3) !important;
    border-radius: 0px !important;
    border: 0px  !important;

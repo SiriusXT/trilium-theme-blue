@@ -4,7 +4,7 @@
 
 1. Blue Theme 
 
-2. More compact, line spacing, paragraph spacing, etc. 
+2. **More compact**, line spacing, paragraph spacing, etc. 
 
 3. Indent the first line and align both ends. 
 
@@ -12,7 +12,7 @@
 
 5. Tree style.
 
-6. Title style of H1, H2, H3 and H4 . 
+6. **Title style of H1, H2, H3 and H4 . **
 
 7. More obvious scroll bar.
 
