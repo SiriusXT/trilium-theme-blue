@@ -275,13 +275,6 @@ li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5)>span.fancytree-nod
 
 
 
-
-
-.fancytree-node{
-   padding-top:0px !important;
-   padding-bottom:0px !important;
-   height: 30px;
-}
 span.fancytree-node.fancytree-active {
    
    border-radius: 0px !important;
