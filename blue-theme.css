@@ -1,4 +1,8 @@
-
+/*
+Blue theme 
+https://github.com/SiriusXT/trilium-theme-blue
+version:0.2
+*/
 
 
 div#toast-container{
@@ -12,7 +16,12 @@ div#toast-container{
    background-color:var(--color-blue-light) !important;
 }
 
-
+div.note-detail div.ck-horizontal-line.ck-widget{
+   margin-top: 10px !important;
+}
+.ck-content hr{
+   margin-bottom: 10px !important;
+}
 
 
 body,span.fancytree-title{
@@ -34,8 +43,10 @@ div#launcher-pane .icon-action {
   color: #f0f4f4;
 }
 
-span.fancytree-selected span.fancytree-title{
-   text-decoration:underline;
+
+span.fancytree-selected{
+   background-color:rgba(70, 130, 180, 0.3) !important;
+   border-radius:0px  !important;
 }
 
 div#launcher-pane .global-menu-button {
@@ -128,6 +139,10 @@ div#root-widget div#rest-pane div.tab-row-widget div.note-new-tab {
    color: var(--color-gray-dark);
    background-color: var(--color-gray-light-alpha);
 }
+div#rest-pane > div.component{
+   height: 30px !important;
+   margin-bottom: 1px !important;
+}
 .note-new-tab{
    width: 30px !important;
    height: 30px !important;
@@ -166,60 +181,134 @@ div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab[activ
    margin-right: 5px;
 }
 
-li.fancytree-lastsib ul li[role='treeitem']:hover {
-    background: rgba(70, 130, 180, 0.2) !important;
-   
-}
-span.fancytree-node.fancytree-expanded.fancytree-folder:hover{
-   background: rgba(70, 130, 180, 0.2) !important;
-}
+
 
 
 #left-pane.component {
    background-image: url("/custom/background.png");
 }
 
+
+
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n) {
-   border-left: 4px solid #f4a6a6 !important;
+   border-left: 4px solid #f4a6a6 ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) {
-   border-left: 4px solid #99d0df !important;
+   border-left: 4px solid #99d0df;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) {
-   border-left: 4px solid #b4afdf !important;
+   border-left: 4px solid #b4afdf ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) {
-   border-left: 4px solid #abd58b !important;
+   border-left: 4px solid #abd58b ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) {
-   border-left: 4px solid #f3d275 !important;
+   border-left: 4px solid #f3d275 ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
-   border-left: 4px solid #bccdf1 !important;
+   border-left: 4px solid #bccdf1;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n):hover {
+   background-color:#f4a6a640 !important;
+}
 
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1):hover {
+   background-color:#99d0df40 !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2):hover {
+   background-color:#b4afdf40 !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3):hover {
+   background-color:#abd58b40 !important ;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4):hover {
+   background-color:#f3d27540 !important ;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5):hover {
+   background-color:#bccdf140 !important ;
+}
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)>span.fancytree-node:hover {
+   background-color:#f4a6a640 !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1)>span.fancytree-node:hover {
+   background-color:#99d0df40 !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2)>span.fancytree-node:hover {
+   background-color:#b4afdf40 !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3)>span.fancytree-node:hover {
+   background-color:#abd58b40 !important ;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4)>span.fancytree-node:hover {
+   background-color:#f3d27540 !important ;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5)>span.fancytree-node:hover {
+   background-color:#bccdf140 !important ;
+}
+
+
+
+
+
+.fancytree-node{
+   padding-top:0px !important;
+   padding-bottom:0px !important;
+   height: 30px;
+}
 span.fancytree-node.fancytree-active {
-   background-color: rgba(70, 130, 180, 0.3) !important;
+   
    border-radius: 0px !important;
    border: 0px  !important;
+}
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)>span.fancytree-node.fancytree-active {
+   background-color:#f4a6a680 !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1)> span.fancytree-node.fancytree-active {
+   background-color:#99d0df80 !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) >span.fancytree-node.fancytree-active {
+   background-color:#b4afdf80 !important;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) >span.fancytree-node.fancytree-active {
+   background-color:#abd58b80 !important ;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4)> span.fancytree-node.fancytree-active {
+   background-color:#f3d27580 !important ;
+}
+
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5)> span.fancytree-node.fancytree-active {
+   background-color:#bccdf180 !important ;
 }
 
 span.button-widget.icon-action.bx.component.bx-history,
@@ -248,6 +337,14 @@ div.note-detail p{
    text-justify: distribute;
 }
 
+dl, ol, ul{
+   padding-left: 2em;
+}
+div.note-detail ul>li,ol>li{
+   text-align: justify;
+   text-justify: distribute;
+}
+
 blockquote>p {
    text-indent: 0em;
 }
@@ -258,13 +355,15 @@ p>span.ck-math-tex {
 
 
 .note-detail {
-   line-height: 1.25;
+   line-height: 1.3;
 }
 
 
-.image-inline {
-   vertical-align: middle;
+.ck-content p>span.image-inline{    
+   vertical-align: middle;  
+   
 }
+
 
 .ck-content figure.image{
    margin-top: 0.2rem;
@@ -287,6 +386,9 @@ div.note-detail.component figure.image{
    padding: 0px !important;
 }
 
+.note-icon-widget.dropdown.component {
+ padding-top: 1.5px !important;
+}
 
 .basic-properties-widget>* {
    margin-top: 0px !important;
@@ -332,11 +434,13 @@ div#center-pane .note-book-card {
 #center-pane div.note-detail-editable-text div.note-detail-editable-text-editor.ck.ck-content pre,#center-pane .CodeMirror pre code {
    color: var(--color-blue-dark) !important;
    padding: 0.2em;
-   
    margin: 0.5rem auto 0.5rem;
-   
    background-color: var(--color-gray-light);
    border: 1px dotted var(--color-gray);
+}
+
+div.note-detail-editable-text{
+   padding-right:10px;
 }
 
 
@@ -357,7 +461,7 @@ span.katex * {
    color: #2C3E50  !important;
    border-left: 5px solid #D6DBDF  !important;
    background: none repeat scroll 0 0 rgba(102,128,153,.05)  !important;
-   padding: 2px 0 5px !important;
+   padding: 2px 1px 3px !important;
    margin: 0.2rem 0 0 0 !important;
 }
 blockquote>p{
@@ -373,11 +477,6 @@ dl, ol, ul{
 .ck-content .table{
    margin-top: 0.1rem;
    margin-bottom: 0.1rem;
-}
-
-div.find-box{
-   right: 40px !important;
-   top: 43px !important;
 }
 
 
@@ -425,4 +524,21 @@ h4 {
 h1, h2, h3, h4, h5, h6{
    margin-top:.3rem !important;
    margin-bottom: .15rem !important;
+}
+
+
+html body.mobile.heading-style-plain div#root-widget.component div.component div.note-title-widget.component{
+   top:0px !important;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+   padding-right:1px !important;
+   padding-left :1px !important;
+}
+
+.ck.ck-editor__editable_inline{
+   padding:1px;
+}
+html body.mobile.heading-style-plain div#root-widget.component div.component div.note-detail.component{
+   padding-right :14px !important;
 }
