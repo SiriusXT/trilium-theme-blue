@@ -3,26 +3,16 @@
 ## Features
 
 1. Blue Theme 
-
 2. **More compact**, line spacing, paragraph spacing, etc. 
-
 3. Indent the first line and align both ends. 
-
 4. The directory tree mouse displays the background color when hovering to highlight the selected folder.
-
 5. Tree style.
-
 6. **Title style of H1, H2, H3 and H4 . **
-
 7. More obvious scroll bar.
-
 8. Expand the background image of the tree. 
-
 9. Other changes.
 
 ## Usage
-
-
 
 1. Create a CSS code note in Trilium and name it `Blue-theme`
 2. Paste the content from `Blue-theme.css` in it
