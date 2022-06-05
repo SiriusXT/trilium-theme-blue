@@ -22,7 +22,7 @@
 
 ## Usage
 
-The theme should work with Trilium version 0.49.5+
+
 
 1. Create a CSS code note in Trilium and name it `Blue-theme`
 2. Paste the content from `Blue-theme.css` in it
@@ -31,5 +31,9 @@ The theme should work with Trilium version 0.49.5+
 5. Add the attribute `#originalFileName=background.png #customResourceProvider=background.png` to `background.png`
 6. Go to Menu > Options, and select Blue-theme as your new theme
 7. Ctrl + R to reload
+
+## Tips
+
+Using the shortcut key `enter`is to create a new paragraph, and this method will automatically indent the first line; using the shortcut key `enter+shift` is a line break, and this method will not indent the first line.
 
 ![](./screenshot.png)
