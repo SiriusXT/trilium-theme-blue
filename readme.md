@@ -1,5 +1,5 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
-
+## Updated for trilium:>0.58.4
 ## Features
 
 1. Blue Theme 

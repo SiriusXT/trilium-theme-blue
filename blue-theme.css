@@ -1,10 +1,8 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-version:0.2
+version:0.3 for trilium:>0.58.4
 */
-
-
 
 
 div#toast-container{
@@ -34,44 +32,37 @@ span:not(.fancytree-active) span.fancytree-title{
 }
 
 
-div#launcher-pane {
-  background-color: var(--color-blue-light);
+#launcher-pane .launcher-button{
+   color: #f0f4f4  !important;
+   background-color: var(--color-blue-light) !important;
 }
-.fancytree-title{
-  top:0 !important;
+.global-menu{
+   background-color: var(--color-blue-light);
+   width: 44px !important;
 }
-div#launcher-pane .component,
-div#launcher-pane .icon-action {
-  color: #f0f4f4;
+.global-menu-button{
+ background-image: url("/assets/v0.58.4/images/icon-color.png") !important;
 }
-
-
-span.fancytree-selected{
-   background-color:rgba(70, 130, 180, 0.3) !important;
-   border-radius:0px  !important;
-}
-
-div#launcher-pane .global-menu-button {
-  filter: invert(1);
-}
-
-div#launcher-pane .global-menu-button:hover {
-  filter: invert(0);
-}
-
-div#launcher-pane .icon-action:hover {
-  background-color: rgba(220,220,220,0.5);
-}
-
 div#launcher-pane.component{
-   width: 44px !important;
-}
-#launcher-pane .icon-action{
-   padding: 9px 9px !important;
-   width: 44px !important;
-   height: 44px !important;
+width: 44px !important;
 }
 
+#launcher-pane .launcher-button{
+ width: 44px !important;
+   padding: initial !important;
+}
+div.spacer.component{
+background-color: var(--color-blue-light) !important;
+}
+.dropdown, .dropleft, .dropright, .dropup {
+ position: initial;
+}
+.sync-status .sync-status-icon{
+   padding: 13px 8px 8px 8px;
+}
+.sync-status .sync-status-icon span{
+   padding: 13px 8px 8px 8px;
+}
 
 
 
@@ -86,7 +77,7 @@ span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before{
    content: "\ec21" !important;
    visibility: visible !important;
    color: rgba(51,51,51,0.1) !important;
-} 
+}
 
 div#root-widget div.gutter-horizontal {
  background: var(--color-gray-light);
@@ -360,8 +351,8 @@ p>span.ck-math-tex {
 }
 
 
-.ck-content p>span.image-inline{    
-   vertical-align: middle;  
+.ck-content p>span.image-inline{
+   vertical-align: middle;
    
 }
 
@@ -377,7 +368,7 @@ div.note-detail.component span.image-inline{
 div.note-detail.component figure.image{
    border: 1px dashed rgb(200, 200, 200);
 }
-   
+
 ::selection {
    background-color: rgba(70,130,180,0.7) !important;
    
@@ -444,6 +435,10 @@ div.note-detail-editable-text{
    padding-right:10px;
 }
 
+.ck.ck-editor__editable pre[data-language]::after {
+   background: rgba(10,10,10,0.1);
+}
+
 
 
 span.katex * {
@@ -497,6 +492,7 @@ h1 {
 h2 {
   background: rgba(39,114,164, 0.7);
   border-radius: 6px 6px 6px 6px;
+  padding-left: 5px;
   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
   color: #FFFFFF;
   font-size: 18px;
@@ -504,7 +500,7 @@ h2 {
   text-shadow: 2px 2px 3px #222222;
 }
 
-h3 {
+h3 {padding-left: 5px;
   background: rgba(17, 122, 101, 0.6);
   border-radius: 6px 6px 6px 6px;
   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
@@ -513,7 +509,7 @@ h3 {
   text-shadow: 2px 2px 3px #222222;
 }
 
-h4 {
+h4 {padding-left: 5px;
   background: rgba(89, 89, 89, 0.5);
   border-radius: 6px 6px 6px 6px;
   box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
@@ -528,14 +524,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-html body.mobile.heading-style-plain div#root-widget.component div.component div.note-title-widget.component{
-   top:0px !important;
-}
 
 
-.ck.ck-editor__editable_inline{
-   padding:1px;
-}
-html body.mobile.heading-style-plain div#root-widget.component div.component div.note-detail.component{
-   padding-right :14px !important;
+html body.mobile.heading-style-plain div#root-widget.component div#launcher-pane.component div#launcher-container.component div.spacer.component{
+background-color: var(--color-blue-light);
+   width: 44px !important;
 }
