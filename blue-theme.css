@@ -5,6 +5,8 @@ version:0.3 for trilium:>0.58.4
 */
 
 
+
+
 div#toast-container{
    right:0px !important;
    bottom:0px !important;
@@ -36,9 +38,13 @@ span:not(.fancytree-active) span.fancytree-title{
    color: #f0f4f4  !important;
    background-color: var(--color-blue-light) !important;
 }
+
 .global-menu{
    background-color: var(--color-blue-light);
    width: 44px !important;
+}
+ul.fancytree-container li {
+   contain: initial;
 }
 .global-menu-button{
  background-image: url("/assets/v0.58.4/images/icon-color.png") !important;
@@ -53,6 +59,7 @@ width: 44px !important;
 }
 div.spacer.component{
 background-color: var(--color-blue-light) !important;
+   width:44px;
 }
 .dropdown, .dropleft, .dropright, .dropup {
  position: initial;
@@ -478,7 +485,6 @@ dl, ol, ul{
 
 a[href^="#root"]{
    
-   border: 1.5px dashed;
 }
 
 
