@@ -1,7 +1,7 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
 ## Updated 
-1. For trilium:>=0.58.6
+1. For trilium:>=0.58.*
 2. Optional: Change the font to `SourceHanSansSC`.
     The default font is relatively thin, and `SourceHanSansSC` is thicker, which is easier to browse.
     Configuration method: import note `font-style` directly.( See the screenshot at the end.)
