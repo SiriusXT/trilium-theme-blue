@@ -537,3 +537,6 @@ html body.mobile.heading-style-plain div#root-widget.component div#launcher-pane
 background-color: var(--color-blue-light);
    width: 44px !important;
 }
+html body.mobile.heading-style-plain div#root-widget.component div.component div.component.d-sm-flex.d-md-flex.d-lg-flex.d-xl-flex{
+   background-image: url("/custom/background.png");
+   }
