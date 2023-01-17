@@ -1,7 +1,7 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-version:0.3 for trilium:>0.58.4
+version:0.4 for trilium:>=0.58.6
 */
 
 
@@ -47,7 +47,8 @@ ul.fancytree-container li {
    contain: initial;
 }
 .global-menu-button{
- background-image: url("/assets/v0.58.4/images/icon-color.png") !important;
+   background-image: url("../../../favicon.ico") !important;
+   background-size: 35px !important;
 }
 div#launcher-pane.component{
 width: 44px !important;
