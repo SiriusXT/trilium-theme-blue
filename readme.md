@@ -1,6 +1,10 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
-## Updated for trilium:>=0.58.6
+## Updated 
+1. For trilium:>=0.58.6
+2. Optional: Change the font to `SourceHanSansSC`.
+    The default font is relatively thin, and `SourceHanSansSC` is thicker, which is easier to browse.
+    Configuration method: import note `font-style` directly.( See the screenshot at the end.)
 
 ## Features
 
@@ -29,3 +33,4 @@
 Using the shortcut key `enter`is to create a new paragraph, and this method will automatically indent the first line; using the shortcut key `enter+shift` is a line break, and this method will not indent the first line.
 
 ![](./screenshot.png)
+![](./screenshot1.png)
