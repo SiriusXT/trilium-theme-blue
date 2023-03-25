@@ -1,7 +1,7 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-version:0.4 for trilium:>=0.58.6
+version:0.5 for trilium:>=0.58.6
 */
 
 
@@ -96,6 +96,11 @@ div#root-widget div.gutter-horizontal {
  border-right: var(--border-standard);
 }
 
+html body.desktop.heading-style-plain div#root-widget.component div#rest-pane.component div.component div.gutter.gutter-horizontal{
+   background:linear-gradient(to bottom, transparent, var(--color-gray-light), transparent) !important;
+   border-left:linear-gradient(to bottom, transparent, var(--border-standard), transparent) !important;
+   border-right:linear-gradient(to bottom, transparent, var(--border-standard), transparent) !important;
+}
 
 #center-pane .title-row .note-icon-widget button {
    display: flex;
@@ -134,6 +139,11 @@ html{
    --border-standard: 1px solid var(--color-gray);
    --color-blue-dark: #2e4b76;
    --link-color: #4682B4 !important;
+   --h2-background-color:rgb(105 154 187);
+    --h3-background-color:rgb(112 175 164);
+    --h4-background-color:rgb(215 187 162);
+    --h5-background-color:rgb(213 186 186);
+    --h6-background-color:rgb(197 197 197);
 }
 
 div#root-widget div#rest-pane div.tab-row-widget div.note-new-tab {
@@ -489,47 +499,82 @@ a[href^="#root"]{
 }
 
 
-
-h1 {
-  padding-left: 0.4em;
-  border-left: 9px solid rgba(0, 0, 0, 1);
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
+/*heading*/  
+div.component.note-split.type-text h1 {
+   padding-left: 0.4em;
+   border-left: 9px solid rgba(0, 0, 0, 1);
+   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
-h2 {
-  background: rgba(39,114,164, 0.7);
-  border-radius: 6px 6px 6px 6px;
-  padding-left: 5px;
-  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-  color: #FFFFFF;
-  font-size: 18px;
-  padding: 5px 0 3px 5px;
-  text-shadow: 2px 2px 3px #222222;
+div.component.note-split.type-text h2 {
+   background: var(--h2-background-color);
+   border-radius: 6px 6px 6px 6px;
+   box-shadow: 0 0 0 1px var(--h2-background-color), 1px 1px 6px 1px var(--h2-background-color);
+   color: #FFFFFF;
+   padding: 5px 0 3px 10px;
+   text-shadow: 2px 2px 3px #222222;
 }
 
-h3 {padding-left: 5px;
-  background: rgba(17, 122, 101, 0.6);
-  border-radius: 6px 6px 6px 6px;
-  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-  color: #FFFFFF;
-  padding: 4px 0 2px 10px;
-  text-shadow: 2px 2px 3px #222222;
+div.component.note-split.type-text h3 {
+   background: var(--h3-background-color);
+   border-radius: 6px 6px 6px 6px;
+   box-shadow: 0 0 0 1px var(--h3-background-color), 1px 1px 6px 1px var(--h3-background-color);
+   color: #FFFFFF;
+   padding: 4px 0 2px 10px;
+   text-shadow: 2px 2px 3px #222222;
 }
 
-h4 {padding-left: 5px;
-  background: rgba(89, 89, 89, 0.5);
-  border-radius: 6px 6px 6px 6px;
-  box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
-  color: #FFFFFF;
-  padding: 3px 0 1px 10px;
-  text-shadow: 2px 2px 3px #222222;
+div.component.note-split.type-text h4{
+   background: var(--h4-background-color);
+   border-radius: 6px 6px 6px 6px;
+   box-shadow: 0 0 0 1px var(--h4-background-color), 1px 1px 6px 1px var(--h4-background-color);
+   color: #FFFFFF;
+   padding: 3px 0 1px 10px;
+   text-shadow: 2px 2px 3px #222222;
 }
 
-h1, h2, h3, h4, h5, h6{
-   margin-top:.3rem !important;
-   margin-bottom: .15rem !important;
+div.component.note-split.type-text  h5:not(div.note-list-widget h5){
+   background: var(--h5-background-color);
+   border-radius: 6px 6px 6px 6px;
+   box-shadow: 0 0 0 1px var(--h5-background-color), 1px 1px 6px 1px var(--h5-background-color);
+   color: #FFFFFF;
+   padding: 2px 0 0px 10px;
+   text-shadow: 2px 2px 3px #222222;
+}
+div.component.note-split.type-text h6 {
+   background: var(--h6-background-color);
+   border-radius: 6px 6px 6px 6px;
+   box-shadow: 0 0 0 1px var(--h6-background-color), 1px 1px 6px 1px var(--h6-background-color);
+   color: #FFFFFF;
+   padding: 1px 0 0px 10px;
+   text-shadow: 2px 2px 3px #222222;
 }
 
+
+div.component.note-split.type-text h1, h2, h3, h4, h5, h6{
+    margin-top:.3rem !important;
+    margin-bottom: .15rem !important;
+}
+
+/*TOC*/
+div.toc-widget span.toc>ol>li{
+    color:var(--h2-background-color);
+}
+div.toc-widget span.toc>ol>ol>li{
+    color:var(--h3-background-color);
+}
+div.toc-widget span.toc>ol>ol>ol>li{
+    color:var(--h4-background-color);
+}
+div.toc-widget span.toc>ol>ol>ol>ol>li{
+    color:var(--h5-background-color);
+}
+div.toc-widget span.toc>ol>ol>ol>ol>ol>li{
+    color:var(--h6-background-color);
+}
+.toc ol{
+    padding-left:15px;
+}
 
 
 

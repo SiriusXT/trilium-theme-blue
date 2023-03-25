@@ -5,6 +5,8 @@
 2. Optional: Change the font to `SourceHanSansSC`.
     The default font is relatively thin, and `SourceHanSansSC` is thicker, which is easier to browse.    
     Configuration method: import note `font-style.zip` directly.( See the screenshot at the end.)
+3. New heading and TOC style
+   ![](heading.png)
 
 ## Features
 
