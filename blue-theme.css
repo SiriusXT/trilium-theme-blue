@@ -533,7 +533,7 @@ div.component.note-split.type-text h4{
    text-shadow: 2px 2px 3px #222222;
 }
 
-div.component.note-split.type-text  h5:not(div.note-list-widget h5){
+div.component.note-split.type-text  h5:not(.note-book-header){
    background: var(--h5-background-color);
    border-radius: 6px 6px 6px 6px;
    box-shadow: 0 0 0 1px var(--h5-background-color), 1px 1px 6px 1px var(--h5-background-color);
