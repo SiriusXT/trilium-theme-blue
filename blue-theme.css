@@ -498,7 +498,6 @@ a[href^="#root"]{
    
 }
 
-
 /*heading*/  
 div.component.note-split.type-text h1 {
    padding-left: 0.4em;
@@ -506,42 +505,42 @@ div.component.note-split.type-text h1 {
    border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
-div.component.note-split.type-text h2 {
+div.component.note-split.type-text h2:not(div.note-list-widget h2) {
    background: var(--h2-background-color);
    border-radius: 6px 6px 6px 6px;
    box-shadow: 0 0 0 1px var(--h2-background-color), 1px 1px 6px 1px var(--h2-background-color);
    color: #FFFFFF;
-   padding: 5px 0 3px 10px;
+   padding: 5px 0 4px 10px;
    text-shadow: 2px 2px 3px #222222;
 }
 
-div.component.note-split.type-text h3 {
+div.component.note-split.type-text h3:not(div.note-list-widget h3) {
    background: var(--h3-background-color);
    border-radius: 6px 6px 6px 6px;
    box-shadow: 0 0 0 1px var(--h3-background-color), 1px 1px 6px 1px var(--h3-background-color);
    color: #FFFFFF;
-   padding: 4px 0 2px 10px;
+   padding: 4px 0 3px 10px;
    text-shadow: 2px 2px 3px #222222;
 }
 
-div.component.note-split.type-text h4{
+div.component.note-split.type-text h4:not(div.note-list-widget h4){
    background: var(--h4-background-color);
    border-radius: 6px 6px 6px 6px;
    box-shadow: 0 0 0 1px var(--h4-background-color), 1px 1px 6px 1px var(--h4-background-color);
    color: #FFFFFF;
-   padding: 3px 0 1px 10px;
+   padding: 3px 0 2px 10px;
    text-shadow: 2px 2px 3px #222222;
 }
 
-div.component.note-split.type-text  h5:not(.note-book-header){
+div.component.note-split.type-text  h5:not(.note-book-header):not(div.note-list-widget h5){
    background: var(--h5-background-color);
    border-radius: 6px 6px 6px 6px;
    box-shadow: 0 0 0 1px var(--h5-background-color), 1px 1px 6px 1px var(--h5-background-color);
    color: #FFFFFF;
-   padding: 2px 0 0px 10px;
+   padding: 2px 0 1px 10px;
    text-shadow: 2px 2px 3px #222222;
 }
-div.component.note-split.type-text h6 {
+div.component.note-split.type-text h6:not(div.note-list-widget h6) {
    background: var(--h6-background-color);
    border-radius: 6px 6px 6px 6px;
    box-shadow: 0 0 0 1px var(--h6-background-color), 1px 1px 6px 1px var(--h6-background-color);
@@ -549,7 +548,6 @@ div.component.note-split.type-text h6 {
    padding: 1px 0 0px 10px;
    text-shadow: 2px 2px 3px #222222;
 }
-
 
 div.component.note-split.type-text h1, h2, h3, h4, h5, h6{
     margin-top:.3rem !important;
