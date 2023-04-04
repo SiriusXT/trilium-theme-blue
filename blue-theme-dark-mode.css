@@ -2,7 +2,7 @@
 /*
 Blue theme dark-mode
 https://github.com/SiriusXT/trilium-theme-blue
-dark-mode version:0.5 for trilium:>0.58.4
+dark-mode version:0.1 for trilium:>0.58.4
 */
 body{
     --ck-color-table-focused-cell-background:#1E1E1E;
@@ -524,7 +524,6 @@ body{
   ::-webkit-scrollbar-thumb {
     border-radius: 5px !important;
     background: var(--launcher-pane-background-color) !important;
-    border-color: var(--launcher-pane-text-color) !important;
   }
   
   
