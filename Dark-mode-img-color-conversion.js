@@ -51,7 +51,7 @@ $('div.component.note-split:not(.hidden-ext) div.component.scrolling-container d
                   var bAvg=Math.round(bSum / pixelCount);
 
                   // Check if the background is white
-                  if ((themeStyle.indexOf('dark')>0  && rAvg > 200 && gAvg > 200 && bAvg > 200)||(themeStyle.indexOf('light')>0 && rAvg <60 && gAvg < 60 && bAvg < 60)) {
+                  if ((themeStyle.indexOf('dark')>0  && rAvg > 170 && gAvg > 170 && bAvg > 170)||(themeStyle.indexOf('light')>0 && rAvg <60 && gAvg < 60 && bAvg < 60)) {
                     if ( !$(img).hasClass('imgInversion')) {
                       $(img).addClass('imgInversion');
                     }
