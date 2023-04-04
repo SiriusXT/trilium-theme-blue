@@ -1,8 +1,5 @@
 var themeStyle = getComputedStyle(document.documentElement).getPropertyValue('--theme-style');
 // Get the value of the CSS custom property "--theme-style" of the document element and assign it to the variable "themeStyle"
-if (themeStyle.indexOf('dark')<0 && themeStyle.indexOf('light')<0){
-    themeStyle="dark";
-}
 
 var invInterval;
 function colorTrans(){
@@ -22,7 +19,8 @@ function imgColorInversion(){
 $('div.component.note-split:not(.hidden-ext) div.component.scrolling-container div.note-detail img').each(function() {
                 var img=this;
                 if ($(img).hasClass('imgInversion') || $(img).hasClass('imgNotInversion')){
-                    return;}
+                    return;
+                }
                 // Iterate over all <img> elements in the document and skip the iteration if the element already has either "imgInversion" or "imgNotInversion" class
                 var imgObj=new Image();
                 // Create a new Image object to get the pixel information
@@ -49,9 +47,10 @@ $('div.component.note-split:not(.hidden-ext) div.component.scrolling-container d
                   var rAvg=Math.round(rSum / pixelCount);
                   var gAvg=Math.round(gSum / pixelCount);
                   var bAvg=Math.round(bSum / pixelCount);
-
+                    console.log($(img),rAvg,gAvg,bAvg);
                   // Check if the background is white
-                  if ((themeStyle.indexOf('dark')>0  && rAvg > 170 && gAvg > 170 && bAvg > 170)||(themeStyle.indexOf('light')>0 && rAvg <60 && gAvg < 60 && bAvg < 60)) {
+                    rAvg > 200 && gAvg > 200 && bAvg > 200
+                  if ((themeStyle.indexOf('dark')>0  && ((rAvg > 200) + ( gAvg > 200) + (bAvg > 200) >= 2))||(themeStyle.indexOf('light')>0 && rAvg <100 && ((rAvg <50) + ( gAvg <50) + (bAvg <50) >= 2))) {
                     if ( !$(img).hasClass('imgInversion')) {
                       $(img).addClass('imgInversion');
                     }
