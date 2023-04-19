@@ -652,3 +652,9 @@ div.note-title-widget.component > input.note-title{
 div.note-icon-widget > button.bx.bx-code.note-icon{
   margin-top: 2px !important;
 }
+.ck-content .table table td, .ck-content .table table th{
+  border: 1px solid var(--main-border-color) !important;
+}
+.ck-content .table table{
+  border: 1px solid var(--main-border-color) !important;
+}
