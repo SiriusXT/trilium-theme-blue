@@ -1,3 +1,8 @@
+/*
+Blue theme
+https://github.com/SiriusXT/trilium-theme-blue
+Dark-mode-img-color-conversion.js version:0.2 for trilium:>0.58.4
+*/
 var themeStyle = getComputedStyle(document.documentElement).getPropertyValue('--theme-style');
 // Get the value of the CSS custom property "--theme-style" of the document element and assign it to the variable "themeStyle"
 
@@ -33,7 +38,7 @@ $('div.component.note-split:not(.hidden-ext) div.component.scrolling-container d
                   var ctx=canvas.getContext('2d');
                   ctx.drawImage(imgObj, 0, 0);
                   // Get the pixel data from the canvas
-                  var imageData=ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+                  var imageData=ctx.getImageData(0, canvas.height*2/3, canvas.width/3, canvas.height/3).data;
                   var rSum=0, gSum=0, bSum=0;
 
                   for (var i=0; i < imageData.length; i +=4) {
@@ -77,13 +82,13 @@ class blackStyle extends api.NoteContextAwareWidget {
 
   doRender() {
     this.$widget =$(`<style type="text/css">
-	img.imgInversion {
+.not(.type-code) img.imgInversion {
   filter: invert(88%) hue-rotate(180deg);
 }
-img:not(.imgInversion),img:not(.imgNotInversion) {
+.not(.type-code) .note-detail-editable-text img:not(.imgInversion),img:not(.imgNotInversion) {
  visibility: hidden;
 }
-img.imgInversion,img.imgNotInversion{
+.not(.type-code) .note-detail-editable-text img.imgInversion,img.imgNotInversion{
   visibility:visible;
 }
 </style>`);
@@ -91,6 +96,7 @@ img.imgInversion,img.imgNotInversion{
   }
 
   async refreshWithNote(note) {
+      if (note.type!="text"){return;}
     $(document).ready(function () {
         clearInterval(invInterval);
         // 遍历所有 <img> 元素
