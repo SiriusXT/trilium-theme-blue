@@ -67,7 +67,7 @@ body{
 
 
 #left-pane.component {
-   background-image: url("/custom/background.png");
+   background-image: url("../../../custom/background.png");
 }
 div.tree-wrapper.component .tree-actions{
    background-color:var(--left-pane-background-color);
