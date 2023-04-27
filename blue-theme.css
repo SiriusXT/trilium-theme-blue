@@ -1,7 +1,7 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.6 for trilium:>=0.58.6
+Version:0.6.1 for trilium:>=0.58.6
 */
 body{
    --color-blue-theme: #4682B4;
@@ -430,7 +430,9 @@ div.note-detail p{
    text-align: justify;
    text-justify: distribute;
 }
-
+div.note-detail p span.bx {
+   display: inline;
+}
 dl, ol, ul{
    padding-left: 2em;
 }

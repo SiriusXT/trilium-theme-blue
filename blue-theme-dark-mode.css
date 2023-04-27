@@ -1,7 +1,7 @@
 /*
 Blue theme dark-mode
 https://github.com/SiriusXT/trilium-theme-blue
-dark-mode version:0.6 for trilium:>0.58.4
+dark-mode version:0.6.1 for trilium:>0.58.4
 */
 body{
   --h2-background-color: rgb(105 154 187 / 50%);
@@ -493,7 +493,9 @@ div.note-detail p{
   text-align: justify;
   text-justify: distribute;
 }
-
+div.note-detail p span.bx {
+  display: inline;
+}
 dl, ol, ul{
   padding-left: 2em;
 }
