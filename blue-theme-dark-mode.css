@@ -364,7 +364,7 @@ div.note-detail div.ck-horizontal-line.ck-widget{
 .ck-content hr{
   margin-bottom: 10px !important;
 }
-#launcher-container > div.dropdown.right-dropdown-widget.dropright.component > button{
+#launcher-container  div.dropdown.right-dropdown-widget.dropright.component > button{
   padding-left:9px !important;
 }
 body,span.fancytree-title{
