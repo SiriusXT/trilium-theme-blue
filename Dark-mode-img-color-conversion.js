@@ -82,13 +82,13 @@ class blackStyle extends api.NoteContextAwareWidget {
 
   doRender() {
     this.$widget =$(`<style type="text/css">
-.not(.type-code) img.imgInversion {
+:not(.type-code) img.imgInversion {
   filter: invert(88%) hue-rotate(180deg);
 }
-.not(.type-code) .note-detail-editable-text img:not(.imgInversion),img:not(.imgNotInversion) {
+:not(.type-code)  img:not(.imgInversion), :not(.type-code)  img:not(.imgNotInversion) {
  visibility: hidden;
 }
-.not(.type-code) .note-detail-editable-text img.imgInversion,img.imgNotInversion{
+:not(.type-code) img.imgInversion, :not(.type-code) img.imgNotInversion{
   visibility:visible;
 }
 </style>`);
