@@ -1,7 +1,7 @@
 /*
 Blue theme dark-mode
 https://github.com/SiriusXT/trilium-theme-blue
-dark-mode version:0.6.1 for trilium:>0.58.4
+dark-mode version:0.7 for trilium:>0.58.4
 */
 body{
   --h2-background-color: rgb(105 154 187 / 50%);
@@ -19,7 +19,7 @@ body{
   --main-text-color: #d4d4d4;
   --main-border-color:  #333333;
 
-  --accented-background-color: #252526;
+  --accented-background-color: rgb(51, 51, 51);
   --more-accented-background-color: #333;
 
   --button-background-color: transparent;
@@ -68,7 +68,7 @@ body{
 
   --scrollbar-border-color: #333;
   --tooltip-background-color: #333;
-  --link-color: #519ABA;
+  --link-color: #4682B4;
 
   --mermaid-theme: dark;
   --ck-color-code-block-label-background: #333;
@@ -76,7 +76,6 @@ body{
     
      
 }
-
 body ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
@@ -226,13 +225,10 @@ div.note-detail.component .ck-content code{
 .ck-content pre {
   border: 1px solid var(--main-border-color) !important;
   border-radius: 0px !important;
-  background-color: var(--accented-background-color) !important;
+  background-color: var(--accented-background-color);
 }
 
 
-.ck-content blockquote {
-  filter: invert(100%) hue-rotate(180deg);
-}
 div.tooltip-inner{
     box-shadow:0px 0px 0px 0px #000 !important;
 }
@@ -346,7 +342,6 @@ div.note-book-card.block-link.expanded {
   background-color:#222 !important;
 }
 
-
 div#toast-container{
   right:0px !important;
   bottom:0px !important;
@@ -364,9 +359,7 @@ div.note-detail div.ck-horizontal-line.ck-widget{
 .ck-content hr{
   margin-bottom: 10px !important;
 }
-#launcher-container  div.dropdown.right-dropdown-widget.dropright.component > button{
-  padding-left:9px !important;
-}
+
 body,span.fancytree-title{
   font-family:var(--detail-font-family) !important;
   top:0px !important;
@@ -378,6 +371,9 @@ span:not(.fancytree-active) span.fancytree-title{
 .global-menu{
  
   width: auto !important;
+}
+#launcher-container  div.dropdown.right-dropdown-widget.dropright.component > button{
+  padding-left:8px !important;
 }
 ul.fancytree-container li {
   contain: initial;
@@ -493,9 +489,11 @@ div.note-detail p{
   text-align: justify;
   text-justify: distribute;
 }
+
 div.note-detail p span.bx {
   display: inline;
 }
+
 dl, ol, ul{
   padding-left: 2em;
 }
@@ -587,6 +585,7 @@ div.attribute-list {
   margin: 0.5rem auto 0.5rem;
   
   
+    border-radius: 5px;
 }
 
 .ck.ck-editor__editable pre[data-language]::after {
@@ -606,13 +605,15 @@ margin: 0.1rem 0;
 
 .ck-content blockquote{
   font-style: initial !important;
-  color: #2C3E50  !important;
-  border-left: 5px solid #c6cdd3  !important;
-  background: none repeat scroll 0 0 rgba(102,128,153,.05)  !important;
+  color: #708faf  !important;
+  border-left: 5px solid var(--main-border-color)  !important;
+  background: none repeat scroll 0 0 rgba(102,128,153,.1)  !important;
   padding: 2px 1px 3px 10px !important;
   margin: 0.2rem 0 0 0 !important;
 }
-
+code{
+font-size: 100% !important;
+}
 
 blockquote>p{
   margin-bottom: 0 !important;
@@ -628,7 +629,12 @@ dl, ol, ul{
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
 }
-
+.ck-content .table table td, .ck-content .table table th{
+  border: 1px solid var(--main-border-color) !important;
+}
+.ck-content .table table{
+  border: 1px solid var(--main-border-color) !important;
+}
 
 
 .form-control {
@@ -653,10 +659,4 @@ div.note-title-widget.component > input.note-title{
 }
 div.note-icon-widget > button.bx.bx-code.note-icon{
   margin-top: 2px !important;
-}
-.ck-content .table table td, .ck-content .table table th{
-  border: 1px solid var(--main-border-color) !important;
-}
-.ck-content .table table{
-  border: 1px solid var(--main-border-color) !important;
 }

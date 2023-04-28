@@ -1,7 +1,7 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
 ## Updated 
-1. Version:0.6.2 For trilium:>=0.58.* :Fix the bugs of trilium link indentation ,Navigation bar bookmark display and Path.
+1. Version:0.7 For trilium:>=0.58.*: Fix the bugs of trilium link indentation, Code, Navigation bar bookmark display and Path.
 2. Optional: Change the font to `SourceHanSansSC`.
     The default font is relatively thin, and `SourceHanSansSC` is thicker, which is easier to browse.    
     Configuration method: import note `font-style.zip` directly.( See the screenshot at the end.)
