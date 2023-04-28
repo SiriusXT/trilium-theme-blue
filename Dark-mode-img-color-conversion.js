@@ -53,8 +53,9 @@ $('div.component.note-split:not(.hidden-ext) div.component.scrolling-container d
                   var gAvg=Math.round(gSum / pixelCount);
                   var bAvg=Math.round(bSum / pixelCount);
                   // Check if the background is white
-                    rAvg > 200 && gAvg > 200 && bAvg > 200
-                  if ((themeStyle.indexOf('dark')>0  && ((rAvg > 200) + ( gAvg > 200) + (bAvg > 200) >= 2))||(themeStyle.indexOf('light')>0 && rAvg <100 && ((rAvg <50) + ( gAvg <50) + (bAvg <50) >= 2))) {
+                   // rAvg > 200 && gAvg > 200 && bAvg > 200
+                    console.log(rAvg,gAvg,bAvg,(themeStyle.indexOf('dark')>0  && ((rAvg > 200) + ( gAvg > 200) + (bAvg > 200) >= 2))||(themeStyle.indexOf('light')>0 && ((rAvg <50) + ( gAvg <50) + (bAvg <50) >= 2)));
+                  if ((themeStyle.indexOf('dark')>0  && ((rAvg > 200) + ( gAvg > 200) + (bAvg > 200) >= 2))||(themeStyle.indexOf('light')>0 && ((rAvg <50) + ( gAvg <50) + (bAvg <50) >= 2))) {
                     if ( !$(img).hasClass('imgInversion')) {
                       $(img).addClass('imgInversion');
                     }
