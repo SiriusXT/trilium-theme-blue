@@ -19,8 +19,8 @@ body{
   --main-text-color: #d4d4d4;
   --main-border-color:  #333333;
 
-  --accented-background-color: #222;
-  --more-accented-background-color: #333;
+  --accented-background-color: #222;/*rgb(51, 51, 51);*/
+  --more-accented-background-color: #1b1b1b;
 
   --button-background-color: transparent;
   --button-border-color: #333;
@@ -219,11 +219,11 @@ div.note-detail.component .hljs-built_in, div.note-detail.component .hljs-keywor
    color:  #bd3c16;
 }
 div.note-detail.component .ck-content code{
-    background-color: var(--accented-background-color);
+    background-color: var(--more-accented-background-color);
 }
 
 .ck-content pre {
-  border: 1px solid var(--main-border-color) !important;
+  border: 1px solid var(--more-accented-background-color) !important;
   border-radius: 0px !important;
   background-color: var(--accented-background-color);
 }
