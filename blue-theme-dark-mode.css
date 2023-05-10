@@ -19,7 +19,7 @@ body{
   --main-text-color: #d4d4d4;
   --main-border-color:  #333333;
 
-  --accented-background-color: rgb(51, 51, 51);
+  --accented-background-color: #222;/*rgb(51, 51, 51);*/
   --more-accented-background-color: #333;
 
   --button-background-color: transparent;
