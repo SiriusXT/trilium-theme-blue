@@ -92,10 +92,7 @@ div.note-book-content.type-canvas>div.rendered-note-content>svg{
   div#launcher-pane .global-menu-button {
   filter: invert(0.5);
 }
-.gutter {
-  width: 2px !important;
-  background: var(--left-pane-background-color) !important;
-}
+
 
 body div.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
   border-radius: 5px !important;
