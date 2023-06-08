@@ -139,6 +139,6 @@ class blackStyle extends api.NoteContextAwareWidget {
       imgColorInversion();
     });
   }
-}
+} 
 
 module.exports = new blackStyle();
