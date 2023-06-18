@@ -1,7 +1,7 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.7 for trilium:>=0.58.6
+Version:0.7.1 for trilium:>=0.58.6
 */
 body{
    
@@ -551,11 +551,6 @@ blockquote>p{
    margin-bottom: 0 !important;
    text-indent: 1.7em !important;
 }
-dl, ol, ul{
-   margin-bottom: 0.1rem !important;
-}
-
-
 
 .ck-content .table{
    margin-top: 0.1rem;
