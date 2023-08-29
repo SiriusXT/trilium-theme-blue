@@ -1,0 +1,37 @@
+/*version:0.1*/
+
+/*Make some text unselectable*/
+.title-bar-buttons.component, tab-row-widget.component, #right-pane, #left-pane, #launcher-container, .dropdown-menu, .note-new-tab{
+    user-select: none;
+}
+
+/*toc style*/
+div.card-body div.toc-widget span.toc  li{
+    list-style-type: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.toc-widget{
+    padding:5px 0px 0 0 !important;
+}
+#right-pane .toc li:hover{
+    background-color:var(--right-pane-li-hover-background);/*rgb(235, 235, 235) rgb(46, 46, 46)*/
+    font-weight: normal;
+}
+
+/*highlights-list style*/
+#right-pane .highlights-list li{
+    list-style-type: decimal;
+}
+#right-pane .highlights-list li:hover{
+   font-weight: normal;
+}
+#right-pane .highlights-list li:hover::marker{
+    content: "➔ "; /*In order not to destroy the original style*/
+    font-weight: bold;
+}
+/*Avoid right panel close button blinking*/
+#right-pane .button-widget{
+    z-index: 2147483647;
+}

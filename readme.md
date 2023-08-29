@@ -7,7 +7,7 @@
     The default font is relatively thin, and `SourceHanSansSC` is thicker, which is easier to browse.    
     Configuration method: import note `font-style.zip` directly.( See the screenshot at the end.)
 3. New heading and TOC style
-   ![](heading.png)
+   ![](./img/heading.png)
 4. Added blue-theme-dark-mode.css.
    **If you use the dark mode theme, you can use the 'Dark-mode-img-color-conversion.js' script to invert the color of the white image to fit the dark mode.** Remember to give Dark-mode-img-color-conversion.js Script to add #widget tag.
 
@@ -37,5 +37,5 @@
 
 Using the shortcut key `enter`is to create a new paragraph, and this method will automatically indent the first line; using the shortcut key `enter+shift` is a line break, and this method will not indent the first line.
 
-![](./screenshot1.png)
-![](./screenshot2.png)
+![](./img/screenshot1.png)
+![](./img/screenshot2.png)
