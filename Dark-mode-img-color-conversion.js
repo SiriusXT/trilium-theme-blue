@@ -1,14 +1,19 @@
 /*
-Blue theme
-https://github.com/SiriusXT/trilium-theme-blue
-Dark-mode-img-color-conversion.js version:0.5 for trilium:>0.58.4
+Dark-mode-img-color-conversion.js version:0.6 for trilium:>0.58.4
+https://github.com/SiriusXT/trilium-theme-blue/blob/main/Dark-mode-img-color-conversion.js
 */
+
+
+let autoAdjustImage=true; 
+let autoAdjustColor=true;
+
 var themeStyle = getComputedStyle(document.documentElement).getPropertyValue('--theme-style');
 // Get the value of the CSS custom property "--theme-style" of the document element and assign it to the variable "themeStyle"
 
 var invInterval;
 function colorTrans() {
-  $('div.component.note-split.type-text:not(.hidden-ext) div.component.scrolling-container div.note-detail span[style*="background-color"]').each(function () {
+  if (!autoAdjustColor){return;};
+  $('div.component.note-split.type-text:not(.hidden-ext) div.component.scrolling-container div.note-detail span[style*="background-color"] , div.highlights-list-widget span[style*="background-color"]').each(function () {
     // Iterate over all <span> elements in the document with a style attribute containing "background-color"
     if (!$(this).hasClass('color-trans')) {
       $(this).addClass('color-trans');
@@ -17,10 +22,13 @@ function colorTrans() {
       $(this).css('background-color', rgbaColor);
     }
   });
+
+
 }
 // If an <span> element does not have the "color-trans" class, add it and adjust its background color
 
 function imgColorInversion() {
+  if (!autoAdjustImage){return;};
   $('div.component.note-split:not(.hidden-ext) div.component.scrolling-container div.note-detail img').each(function () {
     var img = this;
     if ($(img).hasClass('imgInversion') || $(img).hasClass('imgNotInversion')) {
@@ -56,26 +64,17 @@ function imgColorInversion() {
         var bAvg = Math.round(bSum / pixelCount);
         //console.log(pixelCount,rAvg,gAvg,bAvg);
         // Check if the background is white
-        if ((themeStyle.indexOf('dark') >= 0 && ((rAvg > 200) + (gAvg > 200) + (bAvg > 200) >= 2)) || (themeStyle.indexOf('light') >= 0 && ((rAvg < 50) + (gAvg < 50) + (bAvg < 50) >= 2))) {
-          if (!$(img).hasClass('imgInversion')) {
-            $(img).addClass('imgInversion');
-          }
+        if ((themeStyle.indexOf('dark') >= 0 && ((rAvg > 200) + (gAvg > 200) + (bAvg > 200) >= 2)) || (themeStyle.indexOf('light') >= 0 && false)) { 
+          $(img).addClass('imgInversion');
         }
         else {
-          if (!$(img).hasClass('imgNotInversion')) {
-            $(img).addClass('imgNotInversion');
-          }
+          $(img).addClass('imgNotInversion');
         }
       } catch (error) {
         $(img).removeClass('imgInversion');
-        if (!$(img).hasClass('imgNotInversion')) {
-          $(img).addClass('imgNotInversion');
-        }
+        $(img).addClass('imgNotInversion');
       }
     }
-
-
-
   });
 }
 // Iterate over all <img> elements in the document and add the "imgInversion" or "imgNotInversion" class based on the background color of the image
@@ -131,14 +130,15 @@ class blackStyle extends api.NoteContextAwareWidget {
         }, 200);
       });
     });
-
+    $("div.highlights-list-widget , div.component.note-split.type-text:not(.hidden-ext) div.component.scrolling-container div.note-detail").on('DOMSubtreeModified', function () {
+      colorTrans();
+    });
   }
   async entitiesReloadedEvent() {
     $(document).ready(function () {
-      colorTrans();
       imgColorInversion();
     });
   }
-} 
+}
 
 module.exports = new blackStyle();
