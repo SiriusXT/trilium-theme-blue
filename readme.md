@@ -9,7 +9,8 @@
 3. New heading and TOC style
    ![](./img/heading.png)
 4. Added blue-theme-dark-mode.css.
-   **If you use the dark mode theme, you can use the 'Dark-mode-img-color-conversion.js' script to invert the color of the white image to fit the dark mode.** Remember to give Dark-mode-img-color-conversion.js Script to add #widget tag.
+   **If you use the dark mode theme, you can use the 'Dark-mode-img-color-conversion.js' script to invert the color of the white image to fit the dark mode.** Remember to give Dark-mode-img-color-conversion.js Script to add #widget tag. You can add the **#disableAdjustImage** tag to the note if you don’t want the color of a certain note image to be inverted.
+
 
 ## Features
 
