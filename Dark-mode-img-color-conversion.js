@@ -1,6 +1,6 @@
 /*
 Dark-mode-img-color-conversion.js version:0.7 for trilium:>0.58.4
-https://github.com/SiriusXT/trilium-theme-blue/blob/main/Dark-mode-img-color-conversion.js
+https://github.com/SiriusXT/trilium-theme-blue/blob/main/Dark-mode-img-color-conversion.js.
 You can add the #disableAdjustImage tag to the note if you don’t want the color of a certain note image to be inverted.
 */
 
@@ -40,18 +40,13 @@ class autoAdjustTheme extends api.NoteContextAwareWidget {
 
   async refreshWithNote(note) {
     if (note.type != "text") { return; }
-    if (autoAdjustColor) {
-      $("div.highlights-list-widget , div.component.note-split.type-text:not(.hidden-ext) div.component.scrolling-container div.note-detail").on('DOMSubtreeModified', () => {
-        this.adjustColor();
-      });
-    };
     let targetElement = await this.getTargetElement();
     let disableAdjustImage = false;
     if (note.isLabelTruthy("disableAdjustImage")) {
       disableAdjustImage = true;
     }
     if (autoAdjustImage) { this.adjustImage(targetElement, disableAdjustImage); };
-
+    if (autoAdjustColor) { this.adjustColor(targetElement); }
   }
 
   async getTargetElement() {
@@ -138,8 +133,8 @@ class autoAdjustTheme extends api.NoteContextAwareWidget {
     });
   }
 
-  async adjustColor() {
-    $('div.component.note-split.type-text:not(.hidden-ext) div.component.scrolling-container div.note-detail span[style*="background-color"] , div.highlights-list-widget span[style*="background-color"]').each(function () {
+  async adjustColor(targetElement) {
+    $(targetElement).find('span[style*="background-color"]').add($('div.highlights-list-widget span[style*="background-color"]')).each(function () {
       // Iterate over all <span> elements in the document with a style attribute containing "background-color"
       if (!$(this).hasClass('color-trans')) {
         $(this).addClass('color-trans');
