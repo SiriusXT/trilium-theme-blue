@@ -393,10 +393,10 @@ border:0px;
 position: initial;
 }
 .sync-status .sync-status-icon {
-  padding: 13px 8px 8px 8px;
+  padding: 8px 8px 8px 8px;
 }
 .sync-status .sync-status-icon span{
-  padding: 13px 8px 8px 8px;
+  padding: 8px 8px 8px 8px;
 }
 
 div.quick-search.input-group.input-group-sm.component{
@@ -412,7 +412,7 @@ span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before{
 
 #center-pane .title-row .note-icon-widget button {
   display: flex;
-  margin:0;
+  margin-top: 2px;
 }
 input.note-title{
   font-family:var(--detail-font-family) !important;
@@ -478,8 +478,8 @@ span.fancytree-node{
 }
 
 div.note-detail p{
-  margin-top: 0.1rem !important;
-  margin-bottom: 0.1rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
   
   text-indent: 2em;
   
@@ -496,7 +496,13 @@ dl, ol, ul{
 }
 div.note-detail ul>li,ol>li{
   text-align: justify;
-  text-justify: distribute;
+}
+
+div.note-detail ol, .note-detail ul, .note-detail dl{
+  margin-bottom: 0 !important; 
+}
+.ck-content .todo-list li {
+    margin-bottom: 0 !important;
 }
 
 blockquote>p {
@@ -520,8 +526,8 @@ p>span.ck-math-tex {
 
 
 .ck-content figure.image{
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 
@@ -605,7 +611,7 @@ margin: 0.1rem 0;
   color: #708faf  !important;
   border-left: 5px solid var(--main-border-color)  !important;
   background: none repeat scroll 0 0 rgba(102,128,153,.1)  !important;
-  padding: 2px 1px 3px 10px !important;
+  padding: 8px 1px 0px 10px !important;
   margin: 0.2rem 0 0 0 !important;
 }
 code{
@@ -616,7 +622,6 @@ blockquote>p{
   margin-bottom: 0 !important;
   text-indent: 1.7em !important;
 }
-
 
 .ck-content .table{
   margin-top: 0.1rem;
@@ -652,4 +657,20 @@ div.note-title-widget.component > input.note-title{
 }
 div.note-icon-widget > button.bx.bx-code.note-icon{
   margin-top: 2px !important;
+}
+
+.btn.focus, .btn:focus{
+  box-shadow: 0 0 0 0.2rem #11111100 !important;
+}
+.title-bar-buttons div{
+  height:unset !important;
+  width: unset !important;
+}
+.title-bar-buttons div button{
+  height: unset !important;
+  width: unset !important;
+}
+.note-new-tab{
+  background-color: var(--accented-background-color);
+  border-radius: 8px;
 }
