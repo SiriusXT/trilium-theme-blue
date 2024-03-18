@@ -1,7 +1,7 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
 ## Updated 
-1. Version:0.7.2 For trilium:>=0.58.*: Fix some bugs .
+1. Version:0.7.3 For trilium:>=0.58.*: Fix some bugs .
    Dark-mode-img-color-conversion.js version:0.8
 2. Optional: Change the font to `SourceHanSansSC`.
     The default font is relatively thin, and `SourceHanSansSC` is thicker, which is easier to browse.    

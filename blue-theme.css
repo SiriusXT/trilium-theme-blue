@@ -1,7 +1,7 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.7.2 for trilium:>=0.58.6
+Version:0.7.3 for trilium:>=0.58.6
 */
 body{
    
@@ -531,10 +531,6 @@ p>span.ck-math-tex {
  }
 
 
-span.katex * {
-   font-family: KaTeX_Main !important;
-   font: KaTeX_Main, Times New Roman, serif !important;
-}
 
 .katex-display {
  margin: 0.1rem 0;
