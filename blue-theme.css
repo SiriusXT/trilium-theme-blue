@@ -1,51 +1,78 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.7.3 for trilium:>=0.58.6
+Version:0.8 for trilium-NEXT:>=0.90.8
 */
 body{
-   
+   /*--color-blue-theme: #4682B4;
+   --color-blue-theme-alpha: #4682B470;
+   --color-gray: #d6d6d6;
+   --color-gray-light: #f5f5f5;
+   --color-gray-light-text: #999;
+   --color-gray-light-alpha: rgba(199, 199, 199, 0.2);
+   --border-standard: 1px solid var(--color-gray);
+   --color-blue-dark: #2e4b76;
+   --link-color: #4682B4 !important;*/
    --h2-background-color:rgb(105 154 187);
    --h3-background-color:rgb(112 175 164);
    --h4-background-color:rgb(215 187 162);
    --h5-background-color:rgb(190 186 206);
-   --h6-background-color:rgb(197 197 197);    
+   --h6-background-color:rgb(197 197 197);
+   --right-pane-li-hover-background:rgb(235, 235, 235);
 }
 
 :root {
    --theme-style: light;        
    --main-background-color: #fff;
    --main-text-color: #000;
-   --main-border-color:  #ced4da;
+   --main-border-color:  #ced4da;/**/
  
-   
-   
+   /*--accented-background-color: #252526;*/
+   /*--more-accented-background-color: #ddd;*/
  
-   
+   /*--button-background-color: transparent;
+   --button-border-color: #333;
+   --button-text-color: currentColor;
+   --button-border-radius: 3px;
+   --button-disabled-background-color: transparent;
+   --button-disabled-text-color: #999;*/
  
-   --primary-button-background-color: #4682B4;
-   
+   --primary-button-background-color: #4682B4;/**/
+   /*--primary-button-text-color: #ccc;*/
    --primary-button-border-color: transparent;
  
-   
+   /*--muted-text-color: #bbb;
  
-   
+   --input-text-color: #ccc;
+   --input-background-color: #333;*/
  
-   
+   /*--hover-item-text-color: #ccc;
+   --hover-item-background-color: transparent;
+   --hover-item-border-color: #333;
  
-   --left-pane-background-color: #F3f3f3;
-   --left-pane-text-color: #000;
+   --active-item-text-color: #ccc;
+   --active-item-background-color: #04395E;
+   --active-item-border-color: transparent;*/
  
-   --launcher-pane-background-color: #4682B4;
-   --launcher-pane-text-color: #f0f4f4;
+   /*--menu-text-color: #000;
+   --menu-background-color: #222;
+ 
+   --modal-background-color: #333;
+   --modal-backdrop-color: #444;*/
+ 
+   --left-pane-background-color: #F3f3f3;/**/
+   --left-pane-text-color: #000;/**/
+ 
+   --launcher-pane-background-color: #4682B4;/**/
+   --launcher-pane-text-color: #f0f4f4;/**/
  
    --active-tab-background-color: #4682B470;
    --active-tab-hover-background-color: #4682B470;
    --active-tab-text-color: #4682B4;
  
-   
-   --inactive-tab-hover-background-color: #4682B450;
-   
+   /*--inactive-tab-background-color: #4682B470;*/
+   --inactive-tab-hover-background-color: #4682B450;/**/
+   /*--inactive-tab-text-color: #4682B4;*/
  
    --scrollbar-border-color: #ccc;
    --tooltip-background-color: #F3f3f3;
@@ -57,7 +84,7 @@ body{
 
 
 
-
+/*left panel wallpaper*/
 #left-pane.component {
    background-image: url("../../../custom/background.png");
 }
@@ -67,7 +94,7 @@ div.tree-wrapper.component .tree-actions{
 div.tree-actions button.tree-floating-button{
    color:var(--left-pane-text-color);
 }
-
+/*search bar*/
 #left-pane input.search-string {
   background: rgba(255, 255, 255, 0.3) !important;
 }
@@ -184,7 +211,7 @@ li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5)> span.fancytree-no
 }
 
 
-  
+/*heading*/  
 div.component.note-split.type-text h1 {
   padding-left: 0.4em;
   border-left: 9px solid rgba(0, 0, 0, 1);
@@ -241,7 +268,7 @@ div.component.note-split.type-text h1, h2, h3, h4, h5, h6{
    margin-bottom: .15rem !important;
 }
 
-
+/*TOC*/
 div.toc-widget span.toc>ol>li{
    color:var(--h2-background-color);
 }
@@ -261,11 +288,11 @@ div.toc-widget span.toc>ol>ol>ol>ol>ol>li{
    padding-left:15px;
 }
 
- 
+ /*立体
  
  div#rest-pane.component div.tab-row-widget.component{
      box-shadow: 0px 1px #ddd;
- }
+ }*/
  div.quick-search.input-group.input-group-sm.component{
      box-shadow: 0px 1px #ddd;
  }
@@ -274,24 +301,26 @@ div.toc-widget span.toc>ol>ol>ol>ol>ol>li{
      box-shadow: 1px 1px 1px 0px #ddd;
  }
 
+ 
+/*Make the notification in the bottom right*/
 div#toast-container{
-   right:0px !important;
-   bottom:0px !important;
+   right:10px !important;
+   bottom:10px !important;
    top:auto !important;
    width:auto !important;
 }
-
+/*Background color for button opening*/
 .switch-widget span.slider.checked {
    background-color: var(--primary-button-background-color) !important;
  }
-
+/*horizontal line*/
 div.note-detail div.ck-horizontal-line.ck-widget{
    margin-top: 10px !important;
 }
 .ck-content hr{
    margin-bottom: 10px !important;
 }
-
+/*Left title font*/
 body,span.fancytree-title{
    font-family:var(--detail-font-family) !important;
    top:0px !important;
@@ -299,9 +328,13 @@ body,span.fancytree-title{
 span:not(.fancytree-active) span.fancytree-title{
    font-weight: 500 !important;
 }
-
+/*Left navigation bar
+#launcher-pane .launcher-button{    
+   color: #f0f4f4  !important;
+   background-color: var(--color-blue-light) !important;
+}*/
 .global-menu{
-  
+  /* background-color: var(--color-blue-light);*/
    width: auto !important;
 }
 #launcher-container  div.dropdown.right-dropdown-widget.dropright.component > button{
@@ -311,16 +344,15 @@ ul.fancytree-container li {
    contain: initial;
 }
 .global-menu-button{
-   background-image: url("../../../favicon.ico") !important;
    background-size: 35px !important;
 }
 div#launcher-pane.component{
 width: 44px !important;
 }
 #launcher-pane .launcher-button{
-  
    padding: initial !important;
 }
+
 div.dropdown.global-menu.dropright.component > .icon-action{
 border:0px;
 }
@@ -337,7 +369,7 @@ border:0px;
 div.quick-search.input-group.input-group-sm.component{
    align-content: center;
 }
-
+/*Left fold arrow*/
 span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before{
    content: "\ec21" !important;
    visibility: visible !important;
@@ -382,13 +414,12 @@ div#rest-pane div.tab-row-widget div.tab-row-widget-container div.note-tab[activ
    content: "\203B ";
    margin-right: 5px;
 }
-
+/*Gap height between panel items*/
 .fancytree-node{
    padding-top:0px !important;
    padding-bottom:0px !important;
 }
 span.fancytree-node.fancytree-active {
-   
    border-radius: 0px !important;
    border: 0px  !important;
 }
@@ -413,19 +444,18 @@ span.fancytree-node{
 }
 
 div.note-detail p{
-   margin-top: 0.5rem !important;
-   margin-bottom: 0.5rem !important;
-   
+   margin-top: 0.5rem !important;/*0.1*/
+   margin-bottom: 0.5rem !important;/*0.1*/
+   /*first-line indent*/
    text-indent: 2em;
-   
+   /*Align both ends*/
    text-align: justify;
-   text-justify: distribute;
 }
-
+/*does not indent
 div.note-detail p span.bx {
    display: inline;
-}
-
+}*/
+/*List and text alignment*/
 dl, ol, ul{
    padding-left: 2em;
 }
@@ -434,48 +464,46 @@ div.note-detail ul>li,ol>li{
 }
 
 div.note-detail ol, .note-detail ul, .note-detail dl{
-   margin-bottom: 0 !important; 
- }
- .ck-content .todo-list li {
-     margin-bottom: 0 !important;
- }
+ margin-bottom: 0 !important; 
+}
+.ck-content .todo-list li {
+   margin-bottom: 0 !important;
+}
 
 blockquote>p {
    text-indent: 0em;
 }
 
 p>span.ck-math-tex {
-   text-indent: 0em;
+   text-indent: 0em;/*Formulas are not indented*/
 }
 
-
+/*line spacing*/
 .note-detail {
    line-height: 1.35;
 }
 
-
+/*Image center*/
 .ck-content p>span.image-inline{    
    vertical-align: middle;  
-   
 }
 
-
+/*image*/
 .ck-content figure.image{
-   margin-top: 0.5rem;
-   margin-bottom: 0.5rem;
+   margin-top: 0.5rem;/*0.2*/
+   margin-bottom: 0.5rem;/*0.2*/
 }
 
- 
- div.note-detail.component span.image-inline {
+ /*Image Borders*/
+div.note-detail.component span.image-inline {
    border: 1px dashed var(--main-border-color);
- }
+}
  div.note-detail.component figure.image {
    border: 1px dashed var(--main-border-color);
  }
 
 ::selection {
    background-color: rgba(70,130,180,0.5) !important;
-   
 }
 
 
@@ -483,19 +511,19 @@ p>span.ck-math-tex {
    padding: 0px !important;
  }
  
- 
+ /*Left side of title bar*/
  .note-icon-widget.dropdown.component {
    padding-top: 1.5px !important;
  }
  
- 
+/*Button below title bar*/
  .basic-properties-widget>* {
    margin-top: 0px !important;
- }
+}
  
- div.attribute-list {
+div.attribute-list {
    margin-top: 0px !important;
- }
+}
 
 
 .basic-properties-widget {
@@ -514,29 +542,30 @@ p>span.ck-math-tex {
    bottom: 0px !important;
 }
 
-
+/*code block*/
  #center-pane div.note-detail-editable-text div.note-detail-editable-text-editor.ck.ck-content pre,
  #center-pane .CodeMirror pre code {
-   
+   /* color: var(--color-blue-dark) !important; */
    padding: 0.2em;
-   
+   /*original 1.5em;*/
    margin: 0.5rem auto 0.5rem;
-   
-   
+   /*original  margin: 1.0rem auto 2.5rem;*/
+   /* background-color: var(--color-gray-dark);
+   border: 1px dotted var(--color-gray); */
      border-radius: 5px;
  }
- 
- .ck.ck-editor__editable pre[data-language]::after {
+ /*Upper right corner text*/
+.ck.ck-editor__editable pre[data-language]::after {
    opacity: 0.5;
- }
-
-
-
-.katex-display {
- margin: 0.1rem 0;
 }
 
 
+/*formula spacing*/
+.ck-math-tex .katex-display {
+ margin: 0;
+}
+
+/*Quote block style*/
 .ck-content blockquote{
    font-style: initial !important;
    color: #708faf  !important;
@@ -553,19 +582,33 @@ blockquote>p{
    margin-bottom: 0 !important;
    text-indent: 1.7em !important;
 }
+/* 
+dl, ol, ul{
+   margin-bottom: 0.5rem !important;
+}
+*/
 
+
+/*table top and bottom spacing*/
 .ck-content .table{
    margin-top: 0.1rem;
    margin-bottom: 0.1rem;
+   --bs-table-bg: auto;
 }
-.ck-content .table table td, .ck-content .table table th{
+
+.ck-content .table>figcaption{
+   background-color: var(--main-background-color) !important;
+   color: var(--muted-text-color) !important;
+   border-color:  var(--muted-text-color) !important;
+}
+/*.ck-content .table table td, .ck-content .table table th{
    border: 1px solid var(--main-border-color) !important;
 }
 .ck-content .table table{
    border: 1px solid var(--main-border-color) !important;
-}
+}*/
 
- 
+ /*设置界面*/
  .form-control {
    border: 1px solid var(--main-border-color) !important;
  }
@@ -579,7 +622,7 @@ blockquote>p{
      margin-bottom: 0;
  }
 
-
+/*input box focus border color*/
 :focus-visible {
    outline: 2px solid var(--main-border-color);
 }
@@ -589,10 +632,11 @@ div.note-title-widget.component > input.note-title{
 div.note-icon-widget > button.bx.bx-code.note-icon{
    margin-top: 2px !important;
 }
-
+/*The color of the button when clicked, such as the three buttons in the upper right corner*/
 .btn.focus, .btn:focus{
    box-shadow: 0 0 0 0.2rem #11111100 !important;
 }
+/*The size of the three buttons in the upper right corner*/
 .title-bar-buttons div{
    height:unset !important;
    width: unset !important;
@@ -601,7 +645,14 @@ div.note-icon-widget > button.bx.bx-code.note-icon{
    height: unset !important;
    width: unset !important;
 }
+/*new tab page*/
 .note-new-tab{
    background-color: var(--accented-background-color);
    border-radius: 8px;
+}
+
+/*Hollow tree arrow in the lower left corner*/
+.bxs-tree::before {
+   color: transparent;
+   -webkit-text-stroke: 1.8px var(--left-pane-text-color);
 }
