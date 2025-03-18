@@ -6,7 +6,7 @@
 
 >> **Important**:
  Currently, the TriliumNext theme has been set as the base theme. The **blue theme** needs to be assigned the tag `#appThemeBase=next-light`, and the **blue-theme-dark** needs `#appThemeBase=next-dark`.  
- Alternatively, you can directly import `blue-theme.zip` from **Releases**, which includes `blue-theme.css`, `blue-theme-dark-theme.css`, and `Dark-mode-img-color-conversion.js`.
+ <!-- Alternatively, you can directly import `blue-theme.zip` from **Releases**, which includes `blue-theme.css`, `blue-theme-dark-theme.css`, and `Dark-mode-img-color-conversion.js`. -->
 
 
 2. Optional: Change the font to `SourceHanSansSC`.
