@@ -1,8 +1,14 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
 ## Updated 
-1. Version:0.9 For trilium-NEXT:>=0.90.8
+1. Version:0.10 For trilium-NEXT:>=0.92.4
    Dark-mode-img-color-conversion.js version:0.10
+
+>> **Important**:
+ Currently, the TriliumNext theme has been set as the base theme. The **blue theme** needs to be assigned the tag `#appThemeBase=next-light`, and the **blue-theme-dark** needs `#appThemeBase=next-dark`.  
+ Alternatively, you can directly import `blue-theme.zip` from **Releases**, which includes `blue-theme.css`, `blue-theme-dark-theme.css`, and `Dark-mode-img-color-conversion.js`.
+
+
 2. Optional: Change the font to `SourceHanSansSC`.
     The default font is relatively thin, and `SourceHanSansSC` is thicker, which is easier to browse.    
     Configuration method: import note `font-style.zip` directly.( See the screenshot at the end.)
