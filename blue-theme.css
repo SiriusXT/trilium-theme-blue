@@ -1,54 +1,26 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.10 for trilium-NEXT:>=0.92.4
+Version:0.11 for trilium-NEXT:>=0.92.4
 */
 
 :root {
    --theme-style: light;        
-   --main-background-color: #f2f2f2 !important;
+   --main-background-color: #fcfcfc !important;
    --main-text-color: #000 !important;
-   --main-border-color: #ced4da !important;/**/
+   --main-border-color: #ced4da !important;
     --alert-bar-background: #f2f2f2 !important;
-   /*--accented-background-color: #252526;*/
-   /*--more-accented-background-color: #ddd;*/
  
-   /*--button-background-color: transparent;
-   --button-border-color: #333;
-   --button-text-color: currentColor;
-   --button-border-radius: 3px;
-   --button-disabled-background-color: transparent;
-   --button-disabled-text-color: #999;*/
- 
-   --primary-button-background-color: #4682B4 !important;/**/
-   /*--primary-button-text-color: #ccc;*/
+   --primary-button-background-color: #4682B4 !important;
    --primary-button-border-color: transparent !important;
  
-   /*--muted-text-color: #bbb;
- 
-   --input-text-color: #ccc;
-   --input-background-color: #333;*/
- 
-   /*--hover-item-text-color: #ccc;
-   --hover-item-background-color: transparent;
-   --hover-item-border-color: #333;
- 
-   --active-item-text-color: #ccc;
-   --active-item-background-color: #04395E;
-   --active-item-border-color: transparent;*/
- 
-   /*--menu-text-color: #000;
-   --menu-background-color: #222;
- 
-   --modal-background-color: #333;
-   --modal-backdrop-color: #444;*/
- 
+     --launcher-pane-vert-background-color: #4682B4 !important;
+   --launcher-pane-vert-text-color: #f0f4f4 !important;
+    --launcher-pane-vert-button-hover-background: #4682B450 !important;
+   
    --left-pane-background-color: #F3f3f3 !important;
    --left-pane-text-color: #000 !important;
- 
-   --launcher-pane-background-color: #4682B4 !important;
-   --launcher-pane-text-color: #f0f4f4 !important;
- 
+
    --active-tab-background-color: #4682B450 !important;
    --active-tab-hover-background-color: #4682B470 !important;
    --active-tab-text-color: #4682B4 !important;
@@ -87,37 +59,37 @@ div.tree-actions button.tree-floating-button{
    background-color:#fefefe !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n) {
    border-left: 4px solid #f4a6a6 ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) {
    border-left: 4px solid #99d0df;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) {
    border-left: 4px solid #b4afdf ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) {
    border-left: 4px solid #abd58b ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) {
    border-left: 4px solid #f3d275 ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide)  li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
+div.tree  li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
    border-left: 4px solid #bccdf1;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
@@ -287,17 +259,39 @@ div#toast-container {
 }
 
 /* Launcher-pane vertical centered */
-#launcher-pane{
+#launcher-pane.vertical{
    align-items: center; 
-   border-right: none !important;
 }
 
-.global-menu-button{
+#launcher-pane.vertical .launcher-button, #launcher-pane.vertical .dropdown{
+  width:37px !important;
+   height:37px !important;
+}
+
+#launcher-pane.vertical{
+   border-right: 2px solid var(--left-pane-collapsed-border-color);
+}
+#launcher-container {
+   width: 100%;
+}
+
+.icon-action.global-menu-button{
    padding-top: 0px !important;
+   margin-top: 3px !important;
+   font-size: 1em !important;
+}
+.icon-action.global-menu-button .global-menu-button-update-available {
+  top: 17px;
+   left: 21px;
 }
 
-div#launcher-pane.component {
+div#launcher-pane.vertical {
    width: 40px !important;
+}
+
+/* Let the tree of options not display the left border */
+div.tree .fancytree-submatch:not(.fancytree-match) + ul > li {
+ border-left: 0px !important;
 }
 
 /*Left fold arrow*/
@@ -305,14 +299,26 @@ span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before {
    content: "\ec21" !important;
    visibility: visible !important;
    color: var(--left-pane-text-color) !important;
-   opacity: 0.1;
+   opacity: 0.2;
 }
 
-.note-split.type-text p {
+.note-split.type-text .note-detail > div > div > p {
    margin-top: 0.5rem !important;
    margin-bottom: 0.5rem !important;
    text-indent: 2em; /* first-line indent */
    text-align: justify; /* Align both ends */
+}
+/*Apply only to p and not to any sub elements within p*/
+.note-split.type-text p > * {
+   text-indent: 0;
+}
+
+.note-split.type-text blockquote{
+  font-size:90%;
+}
+
+.note-split.type-text a {
+   color: var(--link-color);
 }
 
 /*Make the notes title box not displaying focus animation*/
@@ -328,7 +334,23 @@ div.note-detail pre.hljs{
   background-color: hsla(0,0%,78%,.3) !important;
 }
 
+/*Spacing between the top and bottom of the text block*/
+div.note-detail .attachment-content-wrapper pre code, div.note-detail .ck-content pre code, div.note-detail .ck-mermaid__editing-view {
+  padding-top: 0.5em !important;
+   padding-bottom: 0.5em !important;
+}
+
 .attribute-list > div, .inherited-attributes-widget > div{
    padding-top: 0px !important;
    padding-bottom: 0px !important;
+}
+
+::selection {
+   background-color: #385579;
+   color: #FFFFFF;
+}
+
+/*ckeditor*/
+.ck-content hr {
+  height: 2px !important;
 }

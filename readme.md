@@ -1,7 +1,7 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
 ## Updated 
-1. Version:0.10 For trilium-NEXT:>=0.92.4
+1. Version:0.11 For trilium-NEXT:>=0.92.6
    Dark-mode-img-color-conversion.js version:0.10
 
 >> **Important**:

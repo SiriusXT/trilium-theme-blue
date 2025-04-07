@@ -1,15 +1,15 @@
 /*
 Blue theme dark-mode
 https://github.com/SiriusXT/trilium-theme-blue
-dark-mode version:0.10 for trilium-NEXT:>=0.92.4
+dark-mode version:0.11 for trilium-NEXT:>=0.92.4
 */
 :root {
   --theme-style: dark;
-  --main-background-color: #1E1E1E;
-  --main-text-color:#E6E6E6; /*#d4d4d4;*/
-  --main-border-color: #333333;
-  --second-border-color: #595959;
-  --bs-border-color: #333333;
+  --main-background-color: #1E1E1E !important;
+  --main-text-color:#E6E6E6 !important; /*#d4d4d4;*/
+  --main-border-color: #333333 !important;
+  --second-border-color: #595959 !important;
+  --bs-border-color: #333333 !important;
     
   --accented-background-color: rgb(40,40,40);
   /*rgb(51, 51, 51);*/
@@ -45,11 +45,11 @@ dark-mode version:0.10 for trilium-NEXT:>=0.92.4
   --modal-background-color: #333;
   --modal-backdrop-color: #444;
 
-  --left-pane-background-color: #252526;
-  --left-pane-text-color: #AAAAAA;
+  --left-pane-background-color: #151515 !important;
+  --left-pane-text-color: #AAAAAA !important;
 
-  --launcher-pane-background-color: #333333;
-  --launcher-pane-text-color: rgba(255, 255, 255, 0.4);
+  --launcher-pane-background-color: #111 !important;
+  --launcher-pane-text-color: rgba(255, 255, 255, 0.4) !important;
 
   --link-color: #4682B4;
 
@@ -62,21 +62,40 @@ dark-mode version:0.10 for trilium-NEXT:>=0.92.4
   --h4-background-color: rgb(215 187 162 / 40%);
   --h5-background-color: rgb(190 186 206 / 40%);
   --h6-background-color: rgb(197 197 197 / 40%);
-  --ck-color-table-focused-cell-background: #1E1E1E;
-  --ck-color-selector-focused-cell-background: #1E1E1E;
+  /*--ck-color-table-focused-cell-background: #1E1E1E20;*/
+  --ck-color-selector-focused-cell-background: rgba(158,201,250,0.05);
   --ck-color-focus-border: #bfbfbf !important;
   --dropdown-border-color: var(--second-border-color);
+    
+    /*from next for mobile*/
+    --new-tab-button-background: #fff0;
+    --new-tab-button-color: #ffffff96;
+    --new-tab-button-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    --new-tab-button-hover-background: #fff3;
+    --new-tab-button-hover-color: white;
+    --tab-close-button-hover-background: #a45353;
+    --tab-close-button-hover-color: white;
+    --active-tab-background-color: #ffffff1c;
+    --active-tab-hover-background-color: var(--active-tab-background-color);
+    --active-tab-text-color: #ffffffcd;
+    --active-tab-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(0, 0, 0, 0.4);
+    --active-tab-dragging-shadow: var(--active-tab-shadow), 0 0 20px rgba(0, 0, 0, 0.4);
+    --inactive-tab-background-color: transparent;
+    --inactive-tab-hover-background-color: #ffffff0f;
+    --inactive-tab-text-color: #7c7c7c;
+    
 }
 
 body ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
+
 body .CodeMirror {
   filter: invert(88%) hue-rotate(180deg);
 }
 
-div.note-book-content.type-canvas>div.rendered-note-content>svg {
+div.note-book-content.Itype-canvas>div.rendered-note-content>svg {
   filter: invert(88%) hue-rotate(180deg);
 }
 
@@ -88,111 +107,111 @@ div#launcher-pane .global-menu-button {
   filter: invert(0.5);
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n) {
   border-left: 3px solid #f4a6a670;
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) {
   border-left: 3px solid #99d0df70;
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) {
   border-left: 3px solid #b4afdf70;
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) {
   border-left: 3px solid #abd58b70;
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) {
   border-left: 3px solid #f3d27570;
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 
-div.tree:not(.fancytree-ext-filter.fancytree-ext-filter-hide) li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
+div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
   border-left: 3px solid #bccdf170;
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n):hover {
-  background-color: #f4a6a607 !important;
+  background-color: #f4a6a602 !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1):hover {
-  background-color: #99d0df07 !important;
+  background-color: #99d0df02 !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2):hover {
-  background-color: #b4afdf07 !important;
+  background-color: #b4afdf02 !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3):hover {
-  background-color: #abd58b07 !important;
+  background-color: #abd58b02 !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4):hover {
-  background-color: #f3d27507 !important;
+  background-color: #f3d27502 !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5):hover {
-  background-color: #bccdf107 !important;
+  background-color: #bccdf102 !important;
 }
 
 li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)>span.fancytree-node:hover {
-  background-color: #f4a6a607 !important;
-}
-
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1)>span.fancytree-node:hover {
-  background-color: #99d0df07 !important;
-}
-
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2)>span.fancytree-node:hover {
-  background-color: #b4afdf07 !important;
-}
-
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3)>span.fancytree-node:hover {
-  background-color: #abd58b07 !important;
-}
-
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4)>span.fancytree-node:hover {
-  background-color: #f3d27507 !important;
-}
-
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5)>span.fancytree-node:hover {
-  background-color: #bccdf107 !important;
-}
-
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)>span.fancytree-node.fancytree-active {
   background-color: #f4a6a610 !important;
 }
 
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1)>span.fancytree-node.fancytree-active {
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1)>span.fancytree-node:hover {
   background-color: #99d0df10 !important;
 }
 
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2)>span.fancytree-node.fancytree-active {
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2)>span.fancytree-node:hover {
   background-color: #b4afdf10 !important;
 }
 
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3)>span.fancytree-node.fancytree-active {
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3)>span.fancytree-node:hover {
   background-color: #abd58b10 !important;
 }
 
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4)>span.fancytree-node.fancytree-active {
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4)>span.fancytree-node:hover {
   background-color: #f3d27510 !important;
 }
 
-li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5)>span.fancytree-node.fancytree-active {
+li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5)>span.fancytree-node:hover {
+  background-color: #bccdf110 !important;
+}
+
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)>span.fancytree-node.fancytree-active {
+  background-color: #f4a6a610 !important;
+}
+
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1)>span.fancytree-node.fancytree-active {
+  background-color: #99d0df10 !important;
+}
+
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2)>span.fancytree-node.fancytree-active {
+  background-color: #b4afdf10 !important;
+}
+
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3)>span.fancytree-node.fancytree-active {
+  background-color: #abd58b10 !important;
+}
+
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4)>span.fancytree-node.fancytree-active {
+  background-color: #f3d27510 !important;
+}
+
+#left-pane li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5)>span.fancytree-node.fancytree-active {
   background-color: #bccdf110 !important;
 }
 
@@ -208,7 +227,6 @@ div.note-split.type-text h1 {
   border-left: 9px solid rgba(0, 0, 0, 1);
   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
-
 
 div.note-split.type-text h2:not(div.note-list-widget h2) {
   background: var(--h2-background-color);
@@ -282,6 +300,7 @@ div.toc-widget .toc ol {
 
 ::-webkit-scrollbar-thumb {
   background-color: #222 !important;
+  border-color: #333 !important;
 }
 
 
@@ -298,17 +317,39 @@ div#toast-container {
 }
 
 /* Launcher-pane vertical centered */
-#launcher-pane{
+#launcher-pane.vertical{
     align-items: center; 
-    border-right: none !important;
 }
 
-.global-menu-button{
+#launcher-pane.vertical .launcher-button, #launcher-pane.vertical .dropdown{
+	width:37px !important;
+    height:37px !important;
+}
+
+#launcher-pane.vertical{
+    border-right: 2px solid var(--left-pane-collapsed-border-color);
+}
+#launcher-container {
+    width: 100%;
+}
+
+.icon-action.global-menu-button{
     padding-top: 0px !important;
+    margin-top: 3px !important;
+    font-size: 1em !important;
+}
+.icon-action.global-menu-button .global-menu-button-update-available {
+	top: 17px;
+    left: 21px;
 }
 
-div#launcher-pane.component {
+div#launcher-pane.vertical {
     width: 40px !important;
+}
+
+/* Let the tree of options not display the left border */
+div.tree .fancytree-submatch:not(.fancytree-match) + ul > li {
+  border-left: 0px !important;
 }
 
 /*Left fold arrow*/
@@ -316,14 +357,26 @@ span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before {
     content: "\ec21" !important;
     visibility: visible !important;
     color: var(--left-pane-text-color) !important;
-    opacity: 0.1;
+    opacity: 0.2;
 }
 
-.note-split.type-text p {
+.note-split.type-text .note-detail > div > div > p {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
     text-indent: 2em; /* first-line indent */
     text-align: justify; /* Align both ends */
+}
+/*Apply only to p and not to any sub elements within p*/
+.note-split.type-text p > * {
+    text-indent: 0;
+}
+
+.note-split.type-text blockquote{
+	font-size:90%;
+}
+
+.note-split.type-text a {
+    color: var(--link-color);
 }
 
 /*Make the notes title box not displaying focus animation*/
@@ -339,7 +392,23 @@ div.note-detail pre.hljs{
 	background-color: hsla(0,0%,78%,.3) !important;
 }
 
+/*Spacing between the top and bottom of the text block*/
+div.note-detail .attachment-content-wrapper pre code, div.note-detail .ck-content pre code, div.note-detail .ck-mermaid__editing-view {
+	padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
 .attribute-list > div, .inherited-attributes-widget > div{
     padding-top: 0px !important;
     padding-bottom: 0px !important;
+}
+
+::selection {
+    background-color: #385579;
+    color: #FFFFFF;
+}
+
+/*ckeditor*/
+.ck-content hr {
+	height: 2px !important;
 }
