@@ -1,37 +1,140 @@
-/*version:0.1*/
+/*version:0.2*/
 
 /*Make some text unselectable*/
 .title-bar-buttons.component, tab-row-widget.component, #right-pane, #left-pane, #launcher-container, .dropdown-menu, .note-new-tab{
     user-select: none;
 }
 
-/*toc style*/
-div.card-body div.toc-widget span.toc  li{
-    list-style-type: none;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.toc-widget{
-    padding:5px 0px 0 0 !important;
-}
-#right-pane .toc li:hover{
-    background-color:var(--right-pane-li-hover-background);/*rgb(235, 235, 235) rgb(46, 46, 46)*/
-    font-weight: normal;
+/* It can automatically apply a strikethrough to the text following a checked checkbox */
+.todo-list__label:has(input:checked) .todo-list__label__description {
+    text-decoration: line-through;
+    opacity: 0.6;
 }
 
-/*highlights-list style*/
-#right-pane .highlights-list li{
-    list-style-type: decimal;
+/* Disable some animations */
+.bx-edit-alt.bx-tada, .bx-edit-alt.bx-lg {
+    animation: none !important;  
+    transition: none !important; 
 }
-#right-pane .highlights-list li:hover{
-   font-weight: normal;
+.bx-edit-alt.bx-lg {
+    font-size: 150% !important;
 }
-#right-pane .highlights-list li:hover::marker{
-    content: "➔ "; /*In order not to destroy the original style*/
-    font-weight: bold;
+img {
+    transition: none !important;
 }
-/*Avoid right panel close button blinking*/
-#right-pane .button-widget{
-    z-index: 2147483647;
+
+/* #region 
+ Right Pane style */
+
+#right-pane .card-header-buttons .button-widget.bx-cog {
+  display: none;
 }
+
+/* TOC widget */
+.toc-widget {
+  padding-left: 0px !important;
+}
+
+.toc-widget .toc li {
+  position: relative;
+  padding-left: 20px !important;
+}
+
+.toc-widget .toc>ol {
+  list-style-type: none;
+  padding-left: 5px !important;
+}
+
+.toc-widget .toc>ol ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toc-widget .toc li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--main-border-color);
+}
+
+.toc-widget .toc li::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 12px;
+  background: currentColor;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.toc-widget .toc>ol>li::after {
+  width: 6px;
+  height: 6px;
+
+}
+
+.toc-widget .toc>ol>ol>li::after {
+  width: 6px;
+  height: 6px;
+  border: 2px solid currentColor;
+  background: var(--main-background-color);
+}
+
+.toc-widget .toc>ol>ol>ol li::after {
+  width: 4px;
+  height: 4px;
+  border-radius: 0%;
+}
+
+
+/* highlights list widget */
+
+.highlights-list-widget {
+  padding-left: 0px !important;
+}
+
+.highlights-list-widget li {
+  margin-bottom: 0px !important;
+}
+
+.highlights-list-widget .highlights-list li {
+  position: relative;
+  padding-left: 20px !important;
+}
+
+.highlights-list-widget .highlights-list>ol {
+  list-style-type: none;
+  padding-left: 5px !important;
+}
+
+.highlights-list-widget .highlights-list>ol ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.highlights-list-widget .highlights-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--main-border-color);
+}
+
+.highlights-list-widget .highlights-list li::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 12px;
+  background: var(--main-text-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+}
+
+/* #endregion */
