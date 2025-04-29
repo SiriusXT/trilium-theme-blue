@@ -15,8 +15,7 @@
 ![alt text](./img/rightpane.png)
 
 > These extra css in [./some_extra_css_styles.css](./some_extra_css_styles.css)
-
-> For usage instructions, please refer to [Applying Custom CSS](https://triliumnext.github.io/Docs/Wiki/themes.html) in the documentation.  
+> For usage instructions, please refer to [Applying Custom CSS](https://github.com/TriliumNext/Notes/blob/b2f8b0014f204937328159577d0673ff20008afc/docs/User%20Guide/User%20Guide/Basic%20Concepts%20and%20Features/Themes.md#applying-custom-css) in the documentation.  
 
 ## Features
 
