@@ -1,10 +1,10 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.11 for trilium-NEXT:>=0.92.4
+Version:0.12 for trilium-NEXT:>=0.92.4
 */
 
-:root {
+body {
    --theme-style: light;        
    --main-background-color: #fcfcfc !important;
    --main-text-color: #000 !important;
@@ -32,7 +32,10 @@ Version:0.11 for trilium-NEXT:>=0.92.4
    --scrollbar-border-color: #ccc;
    --tooltip-background-color: #F3f3f3;
    --link-color: #4682B4 !important;
- 
+    
+   --ck-color-base-active: #bfd7f711 !important;
+   --ck-color-editable-blur-selection: #bfd7f770 !important;
+   
    --mermaid-theme: light;
    --ck-color-code-block-label-background: #333;
    --right-pane-li-hover-background:rgb(235, 235, 235);
@@ -44,10 +47,10 @@ Version:0.11 for trilium-NEXT:>=0.92.4
    --h6-background-color:rgb(197 197 197);
  }
 
-/*left panel wallpaper*/
+/*left panel wallpaper
 #left-pane.component {
    background-image: url("../../../custom/background.png");
-}
+}*/
 div.tree-wrapper.component .tree-actions{
    background-color:var(--left-pane-background-color);
 }
@@ -60,37 +63,37 @@ div.tree-actions button.tree-floating-button{
 }
 
 div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n) {
-   border-left: 4px solid #f4a6a6 ;
+   border-left: 3px solid #f4a6a6 ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+1) {
-   border-left: 4px solid #99d0df;
+   border-left: 3px solid #99d0df;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+2) {
-   border-left: 4px solid #b4afdf ;
+   border-left: 3px solid #b4afdf ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+3) {
-   border-left: 4px solid #abd58b ;
+   border-left: 3px solid #abd58b ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 div.tree li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+4) {
-   border-left: 4px solid #f3d275 ;
+   border-left: 3px solid #f3d275 ;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
 
 div.tree  li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5) {
-   border-left: 4px solid #bccdf1;
+   border-left: 3px solid #bccdf1;
    border-top-left-radius: 10px !important;
    border-bottom-left-radius: 10px !important;
 }
@@ -244,6 +247,9 @@ div.toc-widget span.toc>ol>ol>ol>ol>ol>li{
    padding-left:15px;
 }
 
+::selection {
+   background-color: #bfd7f7;
+}
 
 
 /*
@@ -271,22 +277,27 @@ div#toast-container {
 #launcher-pane.vertical{
    border-right: 2px solid var(--left-pane-collapsed-border-color);
 }
-#launcher-container {
+#launcher-pane.vertical #launcher-container {
    width: 100%;
+   scrollbar-width: none; /*Avoid firefox scrollbar blocking*/
 }
 
-.icon-action.global-menu-button{
+#launcher-pane.vertical .icon-action.global-menu-button{
    padding-top: 0px !important;
    margin-top: 3px !important;
    font-size: 1em !important;
 }
-.icon-action.global-menu-button .global-menu-button-update-available {
+#launcher-pane.vertical .icon-action.global-menu-button .global-menu-button-update-available {
   top: 17px;
    left: 21px;
 }
 
 div#launcher-pane.vertical {
    width: 40px !important;
+}
+
+.tree {
+  padding-right: 0px !important;
 }
 
 /* Let the tree of options not display the left border */
@@ -302,6 +313,14 @@ span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before {
    opacity: 0.2;
 }
 
+/* title input */
+input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="datetime-local"]:focus, textarea.form-control:focus, textarea:focus, .tn-input-field:focus, .tn-input-field:focus-within {
+  outline: 0.5px solid var(--input-focus-outline-color) !important;
+}
+input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="datetime-local"]:focus, textarea.form-control:focus, textarea:focus, .tn-input-field:focus, .tn-input-field:focus-within {
+  transition: none !important;
+}
+
 .note-split.type-text .note-detail > div > div > p {
    margin-top: 0.5rem !important;
    margin-bottom: 0.5rem !important;
@@ -313,12 +332,20 @@ span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before {
    text-indent: 0;
 }
 
-.note-split.type-text blockquote{
+.note-split.type-text .ck-content blockquote{
   font-size:90%;
 }
 
 .note-split.type-text a {
    color: var(--link-color);
+}
+
+/* tab row */
+.tab-row-widget .note-tab .note-tab-title {
+  text-overflow: initial !important;
+}
+.tab-row-widget .note-tab[active] .note-tab-wrapper {
+  box-shadow: unset !important;
 }
 
 /*Make the notes title box not displaying focus animation*/
@@ -340,17 +367,22 @@ div.note-detail .attachment-content-wrapper pre code, div.note-detail .ck-conten
    padding-bottom: 0.5em !important;
 }
 
-.attribute-list > div, .inherited-attributes-widget > div{
-   padding-top: 0px !important;
-   padding-bottom: 0px !important;
-}
-
-::selection {
-   background-color: #385579;
-   color: #FFFFFF;
-}
-
 /*ckeditor*/
 .ck-content hr {
   height: 2px !important;
+}
+.katex-display {
+   margin-bottom: 1px !important;
+}
+
+/*Right-click menu to quickly open*/
+body > .dropdown-menu {
+   animation: initial !important;
+}
+.dropdown-menu .dropdown-menu {
+   animation: dropdown-menu-opening 100ms ease-in;
+}
+
+.note-list-wrapper .note-book-card .note-book-content {
+  font-size: 1rem !important;
 }
