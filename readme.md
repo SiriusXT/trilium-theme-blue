@@ -8,14 +8,15 @@
  Alternatively, you can directly import `blue-theme.zip` from **Releases**, which includes `blue-theme.css`, `blue-theme-dark-theme.css`, and `Dark-mode-img-color-conversion.js`.
 
 ## Some extra css styles
-> [see ./some_extra_css_styles.css](./some_extra_css_styles.css)
-For usage instructions, please refer to [Applying Custom CSS](https://triliumnext.github.io/Docs/Wiki/themes.html) in the documentation.  
-
 1. Automatically apply a strikethrough to the text following a checked checkbox
 ![alt text](./img/checkboxes.png)
 
 2. New right panel style. Design rationale: In multi-level directories, lower-level headings were indented too much, causing excessive line breaks, so all headings are now left-aligned. Level 2 heading: Solid bullet (•); Level 3 heading: Hollow bullet (◦); Other levels (4–6): Small square (▪).
 ![alt text](./img/rightpane.png)
+
+> These extra css in [./some_extra_css_styles.css](./some_extra_css_styles.css)
+
+> For usage instructions, please refer to [Applying Custom CSS](https://triliumnext.github.io/Docs/Wiki/themes.html) in the documentation.  
 
 ## Features
 
