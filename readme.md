@@ -7,7 +7,10 @@
  Currently, the TriliumNext theme has been set as the base theme. The **blue theme** needs to be assigned the tag `#appTheme=blue-theme-light #appThemeBase=next-light`, and the **blue-theme-dark** needs `#appTheme=blue-theme-dark #appThemeBase=next-dark`.  
  Alternatively, you can directly import `blue-theme.zip` from **Releases**, which includes `blue-theme.css`, `blue-theme-dark-theme.css`, and `Dark-mode-img-color-conversion.js`.
 
-## [Some extra css styles](./some_extra_css_styles.css)
+## Some extra css styles
+> [see ./some_extra_css_styles.css](./some_extra_css_styles.css)
+For usage instructions, please refer to [Applying Custom CSS](https://triliumnext.github.io/Docs/Wiki/themes.html) in the documentation.  
+
 1. Automatically apply a strikethrough to the text following a checked checkbox
 ![alt text](./img/checkboxes.png)
 
