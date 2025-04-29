@@ -7,18 +7,12 @@
  Currently, the TriliumNext theme has been set as the base theme. The **blue theme** needs to be assigned the tag `#appTheme=blue-theme-light #appThemeBase=next-light`, and the **blue-theme-dark** needs `#appTheme=blue-theme-dark #appThemeBase=next-dark`.  
  Alternatively, you can directly import `blue-theme.zip` from **Releases**, which includes `blue-theme.css`, `blue-theme-dark-theme.css`, and `Dark-mode-img-color-conversion.js`.
 
-2. New heading and TOC style
-   ![](./img/heading.png)
-
-3. Added blue-theme-dark-mode.css.
-   **If you use the dark mode theme, you can use the 'Dark-mode-img-color-conversion.js' script to invert the color of the white image to fit the dark mode.** Remember to give Dark-mode-img-color-conversion.js Script to add #widget tag. *You can add the **#disableAdjustImage** tag to the note if you don’t want the color of a certain note image to be inverted.*
-
 ## [Some extra css styles](./some_extra_css_styles.css)
 1. Automatically apply a strikethrough to the text following a checked checkbox
-![alt text](checkboxes.png)
+![alt text](./img/checkboxes.png)
 
 2. New right panel style. Design rationale: In multi-level directories, lower-level headings were indented too much, causing excessive line breaks, so all headings are now left-aligned. Level 2 heading: Solid bullet (•); Level 3 heading: Hollow bullet (◦); Other levels (4–6): Small square (▪).
-![alt text](rightpane.png)
+![alt text](./img/rightpane.png)
 
 ## Features
 
@@ -41,6 +35,8 @@
 5. Add the attribute `#originalFileName=background.png #customResourceProvider=background.png` to `background.png`
 6. Go to Menu > Options, and select Blue-theme as your new theme
 7. Ctrl + R to reload
+
+8. **If you use the dark mode theme, you can use the 'Dark-mode-img-color-conversion.js' script to invert the color of the white image to fit the dark mode.** Remember to give Dark-mode-img-color-conversion.js Script to add #widget tag. *You can add the **#disableAdjustImage** tag to the note if you don’t want the color of a certain note image to be inverted.*
 
 ## Tips
 
