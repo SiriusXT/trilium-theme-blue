@@ -7,14 +7,16 @@
  Currently, the TriliumNext theme has been set as the base theme. The **blue theme** needs to be assigned the tag `#appTheme=blue-theme-light #appThemeBase=next-light`, and the **blue-theme-dark** needs `#appTheme=blue-theme-dark #appThemeBase=next-dark`.  
  Alternatively, you can directly import `blue-theme.zip` from **Releases**, which includes `blue-theme.css`, `blue-theme-dark-theme.css`, and `Dark-mode-img-color-conversion.js`.
 
+2. Automatically apply a strikethrough to the text following a checked checkbox
+
+![img](./img/checkboxes.png)
+
 ## Some optional extra CSS styles
-1. Automatically apply a strikethrough to the text following a checked checkbox
-![alt text](./img/checkboxes.png)
+1. New right panel style. Design rationale: In multi-level directories, lower-level headings were indented too much, causing excessive line breaks, so all headings are now left-aligned. Level 2 heading: Solid bullet (•); Level 3 heading: Hollow bullet (◦); Other levels (4–6): Small square (▪).
 
-2. New right panel style. Design rationale: In multi-level directories, lower-level headings were indented too much, causing excessive line breaks, so all headings are now left-aligned. Level 2 heading: Solid bullet (•); Level 3 heading: Hollow bullet (◦); Other levels (4–6): Small square (▪).
-![alt text](./img/rightpane.png)
+![img](./img/rightpane.png)
 
-> These extra css in [./some_extra_css_styles.css](./some_extra_css_styles.css).
+> This extra css in [./some_extra_css_styles.css](./some_extra_css_styles.css).
 
 > For usage instructions, please refer to [Applying Custom CSS](https://github.com/TriliumNext/Notes/blob/b2f8b0014f204937328159577d0673ff20008afc/docs/User%20Guide/User%20Guide/Basic%20Concepts%20and%20Features/Themes.md#applying-custom-css) in the documentation.  
 
@@ -26,9 +28,7 @@
 4. The directory tree mouse displays the background color when hovering to highlight the selected folder.
 5. Tree style.
 6. **Title style of H1, H2, H3 and H4 . **
-7. More obvious scroll bar.
-8. Expand the background image of the tree. 
-9. Other changes.
+7. Other changes.
 
 ## Usage
 

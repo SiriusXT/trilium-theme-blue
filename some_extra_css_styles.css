@@ -1,36 +1,20 @@
 /*version:0.2*/
 
-/*Make some text unselectable*/
-.title-bar-buttons.component, tab-row-widget.component, #right-pane, #left-pane, #launcher-container, .dropdown-menu, .note-new-tab{
-    user-select: none;
-}
-
-/* It can automatically apply a strikethrough to the text following a checked checkbox */
-.todo-list__label:has(input:checked) .todo-list__label__description {
-    text-decoration: line-through;
-    opacity: 0.6;
-}
-
-/* Disable some animations */
-.bx-edit-alt.bx-tada, .bx-edit-alt.bx-lg {
-    animation: none !important;  
-    transition: none !important; 
-}
-.bx-edit-alt.bx-lg {
-    font-size: 150% !important;
-}
-img {
-    transition: none !important;
-}
-
 /* #region 
  Right Pane style */
-
+/* Hide right pane options button */
 #right-pane .card-header-buttons .button-widget.bx-cog {
   display: none;
 }
 
-/* TOC widget */
+/* Display the vertical scrollbars for TOC and HLL respectively */
+#right-pane:has(.card.widget.visible ~ .card.widget.visible) .card.widget.visible {
+	max-height: 50%;
+}
+
+/*
+ TOC widget
+*/
 .toc-widget {
   padding-left: 0px !important;
 }
@@ -73,7 +57,6 @@ img {
 .toc-widget .toc>ol>li::after {
   width: 6px;
   height: 6px;
-
 }
 
 .toc-widget .toc>ol>ol>li::after {
@@ -89,8 +72,29 @@ img {
   border-radius: 0%;
 }
 
+/* Hide the tails of the first and last vertical lines */
+.toc-widget .toc>ol::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  left: 5px;
+  top: 0px;
+  height: 12px;
+  background: var(--main-background-color);
+  z-index: 10;
+}
+.toc-widget>.toc > ol:last-child > li:last-child::before,
+.toc-widget>.toc > ol:last-child > ol:last-child > li:last-child::before,
+.toc-widget .toc > ol:last-child > ol:last-child > ol:last-child > li:last-child::before,
+.toc-widget .toc > ol:last-child > ol:last-child > ol:last-child > ol:last-child > li:last-child::before,
+.toc-widget .toc > ol:last-child > ol:last-child > ol:last-child > ol:last-child > ol:last-child > li:last-child::before {
+  top: 0;
+  height: 12px;
+}
 
-/* highlights list widget */
+/*
+  highlights list widget
+*/
 
 .highlights-list-widget {
   padding-left: 0px !important;
@@ -129,12 +133,25 @@ img {
   content: '';
   position: absolute;
   left: 1px;
-  top: 12px;
+  top: 15px;
   background: var(--main-text-color);
   border-radius: 50%;
   transform: translateX(-50%);
   width: 5px;
   height: 5px;
+}
+
+/* Hide the tails of the first and last vertical lines */
+.highlights-list-widget .highlights-list li:first-child::before {
+  top: 15px;
+  bottom: 0;
+}
+.highlights-list-widget .highlights-list ol li:last-child::before {
+  top: 0px;
+  height: 15px;
+}
+.highlights-list-widget .highlights-list>ol>li:last-child:first-child::before{
+  display:none;
 }
 
 /* #endregion */

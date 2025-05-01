@@ -231,42 +231,42 @@ div.note-split.type-text h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
-div.note-split.type-text h2:not(div.note-list-widget h2) {
+.note-detail-editable-text h2:not(div.note-list-widget h2), .note-detail-readonly-text h2:not(div.note-list-widget h2) {
   background: var(--h2-background-color);
   border-radius: 6px 6px 6px 6px;
   padding: 5px 10px 2px 10px;
   text-shadow: 2px 2px 3px var(--main-background-color);
 }
 
-div.note-split.type-text h3:not(div.note-list-widget h3) {
+.note-detail-editable-text h3:not(div.note-list-widget h3), .note-detail-readonly-text h3:not(div.note-list-widget h3) {
   background: var(--h3-background-color);
   border-radius: 6px 6px 6px 6px;
   padding: 4px 10px 2px 10px;
   text-shadow: 2px 2px 3px var(--main-background-color);
 }
 
-div.note-split.type-text h4:not(div.note-list-widget h4) {
+.note-detail-editable-text h4:not(div.note-list-widget h4), .note-detail-readonly-text h4:not(div.note-list-widget h4) {
   background: var(--h4-background-color);
   border-radius: 6px 6px 6px 6px;
   padding: 3px 10px 2px 10px;
   text-shadow: 2px 2px 3px var(--main-background-color);
 }
 
-div.note-split.type-text h5:not(.note-book-header):not(div.note-list-widget h5) {
+.note-detail-editable-text h5:not(.note-book-header):not(div.note-list-widget h5), .note-detail-readonly-text h5:not(div.note-list-widget h5) {
   background: var(--h5-background-color);
   border-radius: 6px 6px 6px 6px;
   padding: 2px 10px 2px 10px;
   text-shadow: 2px 2px 3px var(--main-background-color);
 }
 
-div.note-split.type-text h6:not(div.note-list-widget h6) {
+.note-detail-editable-text h6:not(div.note-list-widget h6), .note-detail-readonly-text h6:not(div.note-list-widget h6) {
   background: var(--h6-background-color);
   border-radius: 6px 6px 6px 6px;
   padding: 1px 10px 2px 10px;
   text-shadow: 2px 2px 3px var(--main-background-color);
 }
 
-div.component.note-split.type-text h1,
+div.note-split.type-text h1,
 h2,
 h3,
 h4,
@@ -303,9 +303,9 @@ div.toc-widget span.toc>ol>ol>ol>ol>ol>li {
 }
 
 ::selection {
-    background-color: #385579;
-    color: #FFFFFF;
+    background-color: #38557960;
 }
+
 
 
 /*
@@ -438,7 +438,35 @@ body > .dropdown-menu {
 .dropdown-menu .dropdown-menu {
     animation: dropdown-menu-opening 100ms ease-in;
 }
-
 .note-list-wrapper .note-book-card .note-book-content {
 	font-size: 1rem !important;
 }
+
+/* It can automatically apply a strikethrough to the text following a checked checkbox */
+.todo-list__label:has(input:checked) .todo-list__label__description {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Make formulas selectable */
+.ck-math-tex{
+    user-select:all !important;
+}
+
+/* Disable some animations */
+.bx-edit-alt.bx-tada, .bx-edit-alt.bx-lg {
+    animation: none !important;  
+    transition: none !important; 
+}
+.bx-edit-alt.bx-lg {
+    font-size: 150% !important;
+}
+img {
+    transition: none !important;
+}
+
+/* workspace-notes */
+.workspace-notes .workspace-icon{
+	font-size: 200% !important;
+}
+
