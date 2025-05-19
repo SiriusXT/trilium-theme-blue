@@ -11,14 +11,6 @@
 
 ![img](./img/checkboxes.png)
 
-## Some optional custom CSS styles
-1. New right panel style. Design rationale: In multi-level directories, lower-level headings were indented too much, causing excessive line breaks, so all headings are now left-aligned. Level 2 heading: Solid bullet (•); Level 3 heading: Hollow bullet (◦); Other levels (4–6): Small square (▪).
-
-![img](./img/rightpane.png)
-
-> This extra css in [./Custom-appCSS.css](./Custom-appCSS.css).
-
-> For usage instructions, please refer to [Applying Custom CSS](https://github.com/TriliumNext/Notes/blob/b2f8b0014f204937328159577d0673ff20008afc/docs/User%20Guide/User%20Guide/Basic%20Concepts%20and%20Features/Themes.md#applying-custom-css) in the documentation.  
 
 ## Features
 
