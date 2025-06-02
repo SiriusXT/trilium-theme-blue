@@ -1,7 +1,7 @@
 /*
 Blue theme dark-mode
 https://github.com/SiriusXT/trilium-theme-blue
-dark-mode version:0.12 for trilium-NEXT:>=0.92.4
+dark-mode version:0.13 for trilium-NEXT:>=0.92.4
 */
 body {
   --theme-style: dark;
@@ -53,7 +53,7 @@ body {
 
   --launcher-pane-background-color: #111 !important;
   --launcher-pane-text-color: rgba(255, 255, 255, 0.4) !important;
-
+	--launcher-pane-vert-size:40px !important;
   --link-color: #4682B4;
 
   --mermaid-theme: dark;
@@ -69,6 +69,9 @@ body {
   --ck-color-selector-focused-cell-background: rgba(158,201,250,0.05);
   --ck-color-focus-border: #bfbfbf !important;
   --dropdown-border-color: var(--second-border-color);
+    
+    --ck-blockquote-border-color: var(--main-border-color);
+    --ck-blockquote-background-color: var(--left-pane-background-color);
     
     /*from next for mobile*/
     --new-tab-button-background: #fff0;
@@ -308,12 +311,13 @@ div.toc-widget span.toc>ol>ol>ol>ol>ol>li {
 
 
 
+
 /*
 	The following are the common parts for both black and light themes
 */
 
 /*Make the notification in the bottom right*/
-div#toast-container {
+#toast-container {
     right: 10px !important;
     bottom: 10px !important;
     top: auto !important;
@@ -327,11 +331,13 @@ div#toast-container {
 
 #launcher-pane.vertical .launcher-button, #launcher-pane.vertical .dropdown{
 	width:37px !important;
-    height:37px !important;
+  height:37px !important;
+  margin-right: 1px;
+  margin-left: 1px;
 }
 
 #launcher-pane.vertical{
-    border-right: 2px solid var(--left-pane-collapsed-border-color);
+    border-right: unset !important;
 }
 #launcher-pane.vertical #launcher-container {
     width: 100%;
@@ -347,17 +353,22 @@ div#toast-container {
 	top: 17px;
     left: 21px;
 }
-
-div#launcher-pane.vertical {
-    width: 40px !important;
+#launcher-pane .sync-status-disconnected-with-changes {
+    animation: unset !important;
 }
+/*
+#launcher-pane.vertical {
+    width: 40px !important;
+}*/
 
 .tree {
 	padding-right: 0px !important;
 }
-
+#left-pane div.tree {
+    padding-left: 0 !important;
+}
 /* Let the tree of options not display the left border */
-div.tree .fancytree-submatch:not(.fancytree-match) + ul > li {
+.tree .fancytree-submatch:not(.fancytree-match) + ul > li {
   border-left: 0px !important;
 }
 
@@ -371,25 +382,39 @@ span.fancytree-node:not(.fancytree-folder) .fancytree-expander::before {
 
 /* title input */
 input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="datetime-local"]:focus, textarea.form-control:focus, textarea:focus, .tn-input-field:focus, .tn-input-field:focus-within {
-	outline: 0.5px solid var(--input-focus-outline-color) !important;
+	outline: 0px solid var(--input-focus-outline-color) !important;
 }
 input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="datetime-local"]:focus, textarea.form-control:focus, textarea:focus, .tn-input-field:focus, .tn-input-field:focus-within {
 	transition: none !important;
 }
 
-.note-split.type-text .note-detail > div > div > p {
+.note-split.type-text .note-detail > div > div > p, blockquote > p {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
     text-indent: 2em; /* first-line indent */
     text-align: justify; /* Align both ends */
 }
+
 /*Apply only to p and not to any sub elements within p*/
 .note-split.type-text p > * {
     text-indent: 0;
 }
 
-.note-split.type-text .ck-content blockquote{
-	font-size:90%;
+div.ck-content blockquote {
+	font-size:90% !important;
+    border: unset !important;
+    border-left: 5px solid var(--ck-blockquote-border-color) !important;
+    box-shadow: unset !important;
+    border-radius: 0px !important;
+    margin: 0.5em 0px 0.5em 0px !important;
+    padding: 0.5em 1em !important;
+    background: var(--ck-blockquote-background-color) !important;
+}
+div.ck-content blockquote:before, div.ck-content blockquote:after {
+    display:none;
+}
+ul {
+	margin-bottom: 0px;
 }
 
 .note-split.type-text a {
@@ -408,9 +433,11 @@ input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, i
 input.note-title:focus{
     transition: none !important;
 }
-
+.floating-buttons-children {
+	opacity: 0.7 !important;
+}
 /*text-note code*/
-div.note-detail pre.hljs{
+.note-detail pre.hljs{
 	box-shadow: unset !important;
 }
 .ck.ck-editor__editable .ck-code_selected{
@@ -418,7 +445,7 @@ div.note-detail pre.hljs{
 }
 
 /*Spacing between the top and bottom of the text block*/
-div.note-detail .attachment-content-wrapper pre code, div.note-detail .ck-content pre code, div.note-detail .ck-mermaid__editing-view {
+.note-detail .attachment-content-wrapper pre code, .note-detail .ck-content pre code, .note-detail .ck-mermaid__editing-view {
 	padding-top: 0.5em !important;
     padding-bottom: 0.5em !important;
 }
@@ -429,6 +456,14 @@ div.note-detail .attachment-content-wrapper pre code, div.note-detail .ck-conten
 }
 .katex-display {
     margin-bottom: 1px !important;
+}
+.attachment-content-wrapper pre, .ck-content pre, .ck-mermaid__editing-view {
+	box-shadow: unset !important;
+}
+.ck-widget.table td.ck-editor__nested-editable.ck-editor__nested-editable_focused, .ck-widget.table td.ck-editor__nested-editable:focus, .ck-widget.table th.ck-editor__nested-editable.ck-editor__nested-editable_focused, .ck-widget.table th.ck-editor__nested-editable:focus {
+	background:unset !important;
+    outline:unset !important;
+    outline-offset:unset !important;
 }
 
 /*Right-click menu to quickly open*/
@@ -469,4 +504,3 @@ img {
 .workspace-notes .workspace-icon{
 	font-size: 200% !important;
 }
-

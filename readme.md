@@ -1,7 +1,7 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
 ## Updated 
-1. Version:0.12 For trilium-NEXT:>=0.92.6
+1. Version:0.13 For trilium-NEXT:>=0.92.4
 
 > **Important**:
  Currently, the TriliumNext theme has been set as the base theme. The **blue theme** needs to be assigned the tag `#appTheme=blue-theme-light #appThemeBase=next-light`, and the **blue-theme-dark** needs `#appTheme=blue-theme-dark #appThemeBase=next-dark`.  
@@ -26,11 +26,9 @@
 
 1. Create a CSS code note in Trilium and name it `Blue-theme`
 2. Paste the content from `Blue-theme.css` in it
-3. Add the `#appTheme=Blue-theme` attribute to it
-4. Download the `background.png` , then right-click on the note and select Import to note
-5. Add the attribute `#originalFileName=background.png #customResourceProvider=background.png` to `background.png`
-6. Go to Menu > Options, and select Blue-theme as your new theme
-7. Ctrl + R to reload
+3. Add the `#appTheme=blue-theme-light #appThemeBase=next-light` attribute to it
+4. Go to Menu > Options, and select Blue-theme as your new theme
+5. Ctrl + R to reload
 
 8. **If you use the dark mode theme, you can use the 'Dark-mode-img-color-conversion.js' script to invert the color of the white image to fit the dark mode.** Remember to give Dark-mode-img-color-conversion.js Script to add #widget tag. *You can add the **#disableAdjustImage** tag to the note if you don’t want the color of a certain note image to be inverted.*
 
