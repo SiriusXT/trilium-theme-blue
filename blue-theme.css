@@ -1,7 +1,7 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.13 for trilium-NEXT:>=0.92.4
+Version:0.14 for trilium-NEXT:>=0.95.0
 */
 
 body {
@@ -63,6 +63,8 @@ body {
     --h4-background-color:#d3ab82;;
     --h5-background-color:rgb(190 186 206);
     --h6-background-color:rgb(197 197 197);
+
+    --launcher-pane-vert-icon-size: 130%;
   }
 
 /*left panel wallpaper
@@ -387,9 +389,7 @@ ul {
 input.note-title:focus{
     transition: none !important;
 }
-.floating-buttons-children {
-	opacity: 0.7 !important;
-}
+
 /*text-note code*/
 .note-detail pre.hljs{
 	box-shadow: unset !important;
@@ -407,6 +407,10 @@ input.note-title:focus{
 /*ckeditor*/
 .ck-content hr {
 	height: 2px !important;
+}
+.ck-content .page-break::after {
+    height: 8px;
+    border-top: 2px dashed rgb(196, 196, 196);
 }
 .katex-display {
     margin-bottom: 1px !important;
@@ -457,4 +461,8 @@ img {
 /* workspace-notes */
 .workspace-notes .workspace-icon{
 	font-size: 200% !important;
+}
+
+.ribbon-container {
+    box-shadow: 0 4px 6px -2px var(--main-border-color);
 }

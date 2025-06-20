@@ -1,7 +1,7 @@
 /*
 Blue theme dark-mode
 https://github.com/SiriusXT/trilium-theme-blue
-dark-mode version:0.13 for trilium-NEXT:>=0.92.4
+dark-mode version:0.14 for trilium-NEXT:>=0.95.0
 */
 body {
   --theme-style: dark;
@@ -90,6 +90,7 @@ body {
     --inactive-tab-hover-background-color: #ffffff0f;
     --inactive-tab-text-color: #7c7c7c;
     
+    --launcher-pane-vert-icon-size: 130%;
 }
 
 body ::-webkit-calendar-picker-indicator {
@@ -312,6 +313,7 @@ div.toc-widget span.toc>ol>ol>ol>ol>ol>li {
 
 
 
+
 /*
 	The following are the common parts for both black and light themes
 */
@@ -433,9 +435,7 @@ ul {
 input.note-title:focus{
     transition: none !important;
 }
-.floating-buttons-children {
-	opacity: 0.7 !important;
-}
+
 /*text-note code*/
 .note-detail pre.hljs{
 	box-shadow: unset !important;
@@ -453,6 +453,10 @@ input.note-title:focus{
 /*ckeditor*/
 .ck-content hr {
 	height: 2px !important;
+}
+.ck-content .page-break::after {
+    height: 8px;
+    border-top: 2px dashed rgb(196, 196, 196);
 }
 .katex-display {
     margin-bottom: 1px !important;
@@ -503,4 +507,8 @@ img {
 /* workspace-notes */
 .workspace-notes .workspace-icon{
 	font-size: 200% !important;
+}
+
+.ribbon-container {
+    box-shadow: 0 4px 6px -2px var(--main-border-color);
 }
