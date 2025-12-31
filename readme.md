@@ -1,7 +1,7 @@
 ## [Blue-theme](https://github.com/SiriusXT/trilium-theme-blue)
 
 ## Updated 
-1. Version:0.13 For trilium-NEXT:>=0.92.4
+1. Version:0.15 for trilium-NEXT:>=0.101.1
 
 > **Important**:
  Currently, the TriliumNext theme has been set as the base theme. The **blue theme** needs to be assigned the tag `#appTheme=blue-theme-light #appThemeBase=next-light`, and the **blue-theme-dark** needs `#appTheme=blue-theme-dark #appThemeBase=next-dark`.  

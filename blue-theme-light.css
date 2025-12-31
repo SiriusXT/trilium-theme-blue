@@ -1,7 +1,7 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.14 for trilium-NEXT:>=0.95.0
+Version:0.15 for trilium-NEXT:>=0.101.1
 */
 
 body {
@@ -60,7 +60,7 @@ body {
 
     --h2-background-color:rgb(105 154 187);
     --h3-background-color:rgb(112 175 164);
-    --h4-background-color:#d3ab82;;
+    --h4-background-color: #e9b887;
     --h5-background-color:rgb(190 186 206);
     --h6-background-color:rgb(197 197 197);
 
@@ -116,7 +116,7 @@ body {
     border-top-left-radius: 10px !important;
     border-bottom-left-radius: 10px !important;
  }
- 
+ /*
  li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n):hover {
     background-color:#f4a6a640 !important;
  }
@@ -140,6 +140,7 @@ body {
  li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n+5):hover {
     background-color:#bccdf140 !important ;
  }
+*/
  li.fancytree-lastsib ul li[role='treeitem']:nth-of-type(6n)>span.fancytree-node:hover {
     background-color:#f4a6a640 !important;
  }
@@ -307,7 +308,7 @@ body {
 }
 #launcher-pane.vertical .icon-action.global-menu-button .global-menu-button-update-available {
 	top: 17px;
-    left: 21px;
+    left: 12px;
 }
 #launcher-pane .sync-status-disconnected-with-changes {
     animation: unset !important;
@@ -344,7 +345,7 @@ input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, i
 	transition: none !important;
 }
 
-.note-split.type-text .note-detail > div > div > p, blockquote > p {
+.note-split.type-text .note-detail p, blockquote > p {
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
     text-indent: 2em; /* first-line indent */
@@ -357,7 +358,7 @@ input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, i
 }
 
 div.ck-content blockquote {
-	font-size:90% !important;
+	font-size:95% !important;
     border: unset !important;
     border-left: 5px solid var(--ck-blockquote-border-color) !important;
     box-shadow: unset !important;
@@ -372,9 +373,10 @@ div.ck-content blockquote:before, div.ck-content blockquote:after {
 ul {
 	margin-bottom: 0px;
 }
-
-.note-split.type-text a {
+/* .note-split.type-text a { */
+a {
     color: var(--link-color);
+    word-break: break-all;
 }
 
 /* tab row */
@@ -419,7 +421,6 @@ input.note-title:focus{
 	box-shadow: unset !important;
 }
 .ck-widget.table td.ck-editor__nested-editable.ck-editor__nested-editable_focused, .ck-widget.table td.ck-editor__nested-editable:focus, .ck-widget.table th.ck-editor__nested-editable.ck-editor__nested-editable_focused, .ck-widget.table th.ck-editor__nested-editable:focus {
-	background:unset !important;
     outline:unset !important;
     outline-offset:unset !important;
 }
@@ -435,11 +436,6 @@ body > .dropdown-menu {
 	font-size: 1rem !important;
 }
 
-/* It can automatically apply a strikethrough to the text following a checked checkbox */
-.todo-list__label:has(input:checked) .todo-list__label__description {
-    text-decoration: line-through;
-    opacity: 0.6;
-}
 
 /* Make formulas selectable */
 .ck-math-tex{
@@ -465,4 +461,28 @@ img {
 
 .ribbon-container {
     box-shadow: 0 4px 6px -2px var(--main-border-color);
+}
+
+/* .shared-info-widget {
+  display: none;
+}
+.ribbon-container:has(.basic-properties-widget) ~ .shared-info-widget {
+  display: block;
+} */
+
+/* .scrolling-container.component position: sticky;
+    background: var(--main-background-color);
+    top: 0; */
+
+body.zen .title-row{
+    background: var(--left-pane-background-color);
+}
+
+@media print {
+    .title-row, .alert-warning {
+        display:none !important;
+    }
+    .note-detail-editable-text h2, h3, h4, h5, h6 {
+      all: revert  !important;
+    }
 }
