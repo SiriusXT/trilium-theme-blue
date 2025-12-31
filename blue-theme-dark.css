@@ -395,7 +395,9 @@ input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, i
     text-indent: 2em; /* first-line indent */
     text-align: justify; /* Align both ends */
 }
-
+.note-split.type-text .note-detail ol p {
+    text-indent: 0; /* first-line indent */
+}
 /*Apply only to p and not to any sub elements within p*/
 .note-split.type-text p > * {
     text-indent: 0;
