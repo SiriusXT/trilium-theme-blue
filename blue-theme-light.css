@@ -1,7 +1,7 @@
 /*
 Blue theme 
 https://github.com/SiriusXT/trilium-theme-blue
-Version:0.15 for trilium-NEXT:>=0.101.1
+Version:0.16 for trilium-NEXT:>=0.101.1
 */
 
 body {
@@ -46,6 +46,7 @@ body {
   
     --scrollbar-border-color: #ccc;
     --tooltip-background-color: #F3f3f3;
+    --tooltip-foreground-color: #000;
     --link-color: #4682B4 !important;
   	
     --ck-color-base-active: #bfd7f711 !important;
@@ -354,6 +355,7 @@ input:not([type]):focus, input[type="text"]:focus, input[type="number"]:focus, i
 .note-split.type-text .note-detail ol p {
     text-indent: 0; /* first-line indent */
 }
+
 /*Apply only to p and not to any sub elements within p*/
 .note-split.type-text p > * {
     text-indent: 0;
